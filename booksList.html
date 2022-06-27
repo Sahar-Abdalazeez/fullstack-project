@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesom v-6 -->
+    <link rel='stylesheet' href='./assets/css/all.min.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!--custom styled for the list -->
+    <link rel="stylesheet" href="./assets/css/bookList.style.css">
+    <!--custom styled for add book container  -->
+    <link rel="stylesheet" href="./assets/css/addBook.style.css">
+    <!--responsive style for the list -->
+    <link rel="stylesheet" href="./assets/css/bookList.responsive.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="Container-list">
+        <div class="title-btn" id="title-btn">
+            <div class="list-title-container" id="list-title-container">
+
+                <div class="main-title">Products List</div>
+                <div class="numberOfItems">We found
+                    <p id="product-num"></p> items for you!</div>
+            </div>
+            <div> <a id="add-book" href="./addBook.html">Add Book</a></div>
+        </div>
+
+        <div id="main-list-container" class="main-list-container"></div>
+
+
+
+
+
+        <div id="outer-update-container">
+            <div class="update-main-container">
+
+                <!--add title Container -->
+                <div class="update-add-container">
+                    <h1 class="update-add-product">Update Product</h1>
+                    <button id="update-btn">update</button>
+                </div>
+
+                <!--Container for left and right parts -->
+                <div class="update-Container">
+
+                    <!--Left Container -->
+                    <div class="update-left-container">
+                        <div class="update-basics">
+                            <div class="basic-title">Basic</div>
+                        </div>
+
+                        <div class="update-info-details">
+                            <div class="update-inputContainer">
+                                <div class="label">product title </div>
+                                <input type="text" class="text-input" id="title" />
+                            </div>
+
+                            <div class="update-inputContainer">
+                                <div class="label">Description </div>
+                                <textarea type="text" class="description" id="description"></textarea>
+                            </div>
+
+                            <div class="update-inputContainer">
+                                <div class="update-row-inputs">
+                                    <div class="update-label-input">
+                                        <div class="label">Price </div>
+                                        <input type="text" class="text-input" placeholder="$" id="price" />
+                                    </div>
+
+                                    <div class="update-label-input">
+                                        <div class="label">Price before discount </div>
+                                        <input type="text" class="text-input" placeholder="$" id="price-before" />
+                                    </div>
+                                    <div class="update-label-input">
+                                        <div class="label">Author name </div>
+                                        <input type="text" class="text-input" id="author-name" />
+                                    </div>
+
+                                </div>
+
+
+                                <div class="update-row-inputs">
+                                    <div class="update-label-input">
+                                        <div class="label">Available </div>
+                                        <input type="text" class="text-input" placeholder="quantity in stock" id="quantity" />
+                                    </div>
+
+                                    <div class="update-label-input">
+                                        <div class="label">Pieces/Set </div>
+                                        <input type="number" min="0" class="text-input" placeholder="0" id="pieces" />
+                                    </div>
+                                    <div class="update-label-input">
+                                        <div class="label">Currency </div>
+                                        <Select type="text" class="select-input" id="currency">
+                                   <option>USD</option>
+                                   <option>JOD</option>
+                                   <option>NIS</option>
+                                </Select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Right Container -->
+                    <div class="update-right-container">
+
+                        <div class="update-main-image-container">
+                            <div class="update-basics">
+                                <div class="basic-title">
+                                    Main Image
+                                </div>
+                            </div>
+
+                            <div class="update-img-container">
+                                <img class="img-added" id="img-added" src="" />
+                                <input type="file" id="add-file" />
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="update-categories-container">
+
+                            <div class="update-basics">
+                                <div class="basic-title">
+                                    Categories
+                                </div>
+                            </div>
+
+                            <div class="update-SelectContainer">
+                                <div class="label">Super Category</div>
+                                <select class="update-select-input" id="super-category">
+                            <option>Book</option>
+                            <option>film</option>
+                            <option>magazine</option>
+
+
+                        </select>
+                            </div>
+
+                            <div class="update-SelectContainer">
+                                <div class="label">Main Category</div>
+                                <select class="update-select-input" id="book-type">
+                            <option>fantacy</option>
+                            <option>scientific</option>
+                            <option>cooking</option>
+                            <option>medicine</option>
+
+                        </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="./assets/js/bookList.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome 6-->
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <!--Bootstrap 5-->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!--Custom css -->
+    <link rel="stylesheet" href="./assets/css/books.style.css">
+    <!--responsive custom css-->
+    <link rel="stylesheet" href="./assets/css/books.responsive.css">
+</head>
+
+
+
+<body>
+    <a href="addBook.html">add book</a>
+    <a href="./booksList.html">show list </a>
+
+    <!--this section for showing books according to type -->
+    <div>
+        <h2>New Arrivals </h2>
+        <div class="btns-container">
+            <button type="button" id="all">All </button>
+            <button type="button" id="fantacy">Fantacy </button>
+            <button type="button" id="cooking">Cooking</button>
+
+        </div>
+        <div class="arrivals" id="arrivals"> </div>
+    </div>
+
+
+    <!--Bootstrap js 5-->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/book.js"></script>
+</body>
+
+</html>

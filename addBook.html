@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome 6-->
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <!--Bootstrap 5-->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!--Custom css -->
+    <link rel="stylesheet" href="./assets/css/addBook.style.css">
+    <!--custom responsive style-->
+    <link rel="stylesheet" href="./assets/css/addBook.responsive.css">
+
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!--add title Container -->
+        <div class="add-container">
+            <h1 class="add-product">Add New Product</h1>
+            <button id="add">Add</button>
+        </div>
+
+        <!--Container for left and right parts -->
+        <div class="Container">
+
+            <!--Left Container -->
+            <div class="left-container">
+                <div class="basics">
+                    <div class="basic-title">Basic</div>
+                </div>
+
+                <div class="info-details">
+                    <div class="inputContainer">
+                        <div class="label">product title </div>
+                        <input type="text" class="text-input" id="title" />
+                    </div>
+
+                    <div class="inputContainer">
+                        <div class="label">Description </div>
+                        <textarea type="text" class="description text-input" id="description"></textarea>
+                    </div>
+
+                    <div class="inputContainer">
+                        <div class="row-inputs">
+                            <div class="label-input">
+                                <div class="label">Price </div>
+                                <input type="text" class="text-input" placeholder="$" id="price" />
+                            </div>
+
+                            <div class="label-input">
+                                <div class="label">Price before discount </div>
+                                <input type="text" class="text-input" placeholder="$" id="price-before" />
+                            </div>
+                            <div class="label-input">
+                                <div class="label">Author name </div>
+                                <input type="text" class="text-input" id="author-name" />
+                            </div>
+
+                        </div>
+
+
+                        <div class="row-inputs">
+                            <div class="label-input">
+                                <div class="label">Available </div>
+                                <input type="text" class="text-input" placeholder="quantity in stock" id="quantity" />
+                            </div>
+
+                            <div class="label-input">
+                                <div class="label">Pieces/Set </div>
+                                <input type="number" min="0" class="text-input" placeholder="0" id="pieces" />
+                            </div>
+                            <div class="label-input">
+                                <div class="label">Currency </div>
+                                <Select type="text" class="select-input" id="currency">
+                                   <option>USD</option>
+                                   <option>JOD</option>
+                                   <option>NIS</option>
+                                </Select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Right Container -->
+            <div class="right-container">
+
+                <div class="main-image-container">
+                    <div class="basics">
+                        <div class="basic-title">
+                            Main Image
+                        </div>
+                    </div>
+
+                    <div class="img-container">
+                        <img class="img-added" id="img-added" src="" />
+                        <input type="file" id="add-file" />
+
+                    </div>
+
+
+                </div>
+
+                <div class="categories-container">
+
+                    <div class="basics">
+                        <div class="basic-title">
+                            Categories
+                        </div>
+                    </div>
+
+                    <div class="SelectContainer">
+                        <div class="label">Super Category</div>
+                        <select class="select-input" id="super-category">
+                            <option>Book</option>
+                            <option>film</option>
+                            <option>magazine</option>
+
+
+                        </select>
+                    </div>
+
+                    <div class="SelectContainer">
+                        <div class="label">Main Category</div>
+                        <select class="select-input" id="book-type">
+                            <option>fantacy</option>
+                            <option>scientific</option>
+                            <option>cooking</option>
+                            <option>medicine</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/addBooks.js"></script>
+</body>
+
+</html>
