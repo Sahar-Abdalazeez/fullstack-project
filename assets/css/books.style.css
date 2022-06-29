@@ -150,3 +150,26 @@ h5 {
       justify-content: right;
       
   }
+
+/* footer */
+  .publisher-item{
+    list-style-type: none;
+}
+
+.footer-info{
+    background-color: #282828;
+}
+
+.social-img {
+    width: 30%;
+}
+
+.card-img-overlay{
+    background-color: rgba(209,64,49,.9);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.social-img:hover .card-img-overlay{
+    opacity: 1;
+}
