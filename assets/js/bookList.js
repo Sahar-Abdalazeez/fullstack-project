@@ -16,7 +16,7 @@ var ContainerTitle = document.getElementById('title-btn');
 
 var titleCheck = false;
 var priceCheck = false;
-var priceBeforeCheck = false;
+
 var AuthorCheck = false;
 
 listNumber = booksItems.length;
@@ -138,7 +138,7 @@ function edit(index) {
     updateDescription.value=book.desc;
     titleCheck= true;
     priceCheck = true;
-    priceBeforeCheck= true;
+    
     AuthorCheck= true;
     disabledOrNot();
 }
@@ -154,7 +154,7 @@ updateBtn.onclick = function updateItem() {
     localStorage.setItem("arrivals", JSON.stringify(arrivals));
     titleCheck = false;
     priceCheck = false;
-    priceBeforeCheck = false;
+    
     AuthorCheck = false;
     disabledOrNot();
     Swal.fire({
@@ -196,14 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-function disabledOrNot() {
-    if (titleCheck && priceCheck && AuthorCheck && priceBeforeCheck) {
-        Add.removeAttribute("disabled");
 
-    } else {
-        Add.setAttribute("disabled", "true");
-    }
-}
 
 updateTitle.onkeyup = function () {
     var namePattern = /^[a-zA-Z].*[\s\.]*$/g;
@@ -263,26 +256,9 @@ updatePrice.onkeyup = function () {
     }
 }
 
-updatePriceBefore.onkeyup = function () {
-    var namePattern = /\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?/;
-    if (namePattern.test(updatePriceBefore.value)) {
-        priceBeforeCheck = true;
-        disabledOrNot();
-        updatePriceBefore.classList.add('is-valid');
-        updatePriceBefore.classList.remove('is-invalid');
-        nameAlert.classList.add('d-none');
-    } else {
-        priceBeforeCheck = false;
-        disabledOrNot();
-        updatePriceBefore.classList.add('is-invalid');
-        updatePriceBefore.classList.remove('is-valid');
-        nameAlert.classList.remove('d-none');
-
-    }
-}
 
 function disabledOrNot() {
-    if (titleCheck && priceCheck && AuthorCheck && priceBeforeCheck) {
+    if (titleCheck && priceCheck && AuthorCheck ) {
         updateBtn.removeAttribute("disabled");
 
     } else {

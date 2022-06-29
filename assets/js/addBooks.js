@@ -10,7 +10,6 @@ var mybooks = JSON.parse(localStorage.getItem('arrivals'));
 
 var titleCheck = false;
 var priceCheck = false;
-var priceBeforeCheck = false;
 var AuthorCheck = false;
 
 
@@ -19,7 +18,7 @@ if (localStorage.getItem('arrivals') == null) {
 }
 
 
-console.log(error)
+
 
 //function to get data from inputs 
 function getData() {
@@ -70,7 +69,7 @@ function clear() {
     author.classList.remove('is-valid');
     title.classList.remove('is-valid');
     price.classList.remove('is-valid');
-    priceBeforeDiscount.classList.remove('is-valid');
+    
 }
 
 
@@ -83,7 +82,7 @@ Add.onclick = function addBook() {
     clear();
     titleCheck = false;
     priceCheck = false;
-    priceBeforeCheck = false;
+    
     AuthorCheck = false;
     disabledOrNot();
     Swal.fire({
@@ -99,7 +98,7 @@ Add.onclick = function addBook() {
 
 
 function disabledOrNot() {
-    if (titleCheck && priceCheck && AuthorCheck && priceBeforeCheck) {
+    if (titleCheck && priceCheck && AuthorCheck ) {
         Add.removeAttribute("disabled");
 
     } else {
@@ -107,23 +106,6 @@ function disabledOrNot() {
     }
 }
 
-title.onkeyup = function () {
-    var namePattern = /^[a-zA-Z].*[\s\.]*$/g;
-    if (namePattern.test(title.value)) {
-        titleCheck = true;
-        disabledOrNot();
-        title.classList.add('is-valid');
-        title.classList.remove('is-invalid');
-        nameAlert.classList.add('d-none');
-    } else {
-        titleCheck = false;
-        disabledOrNot();
-        title.classList.add('is-invalid');
-        title.classList.remove('is-valid');
-        nameAlert.classList.remove('d-none');
-
-    }
-}
 
 
 
@@ -165,19 +147,20 @@ price.onkeyup = function () {
     }
 }
 
-priceBeforeDiscount.onkeyup = function () {
-    var namePattern = /\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?/;
-    if (namePattern.test(priceBeforeDiscount.value)) {
-        priceBeforeCheck = true;
+
+title.onkeyup = function () {
+    var namePattern = /^[a-zA-Z].*[\s\.]*$/g;
+    if (namePattern.test(title.value)) {
+        titleCheck = true;
         disabledOrNot();
-        priceBeforeDiscount.classList.add('is-valid');
-        priceBeforeDiscount.classList.remove('is-invalid');
+        title.classList.add('is-valid');
+        title.classList.remove('is-invalid');
         nameAlert.classList.add('d-none');
     } else {
-        priceBeforeCheck = false;
+        titleCheck = false;
         disabledOrNot();
-        priceBeforeDiscount.classList.add('is-invalid');
-        priceBeforeDiscount.classList.remove('is-valid');
+        title.classList.add('is-invalid');
+        title.classList.remove('is-valid');
         nameAlert.classList.remove('d-none');
 
     }
