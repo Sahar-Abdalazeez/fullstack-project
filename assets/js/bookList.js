@@ -14,7 +14,10 @@ var updateBtn = document.getElementById('update-btn');
 var updatedImg = document.getElementById('img-added');
 var ContainerTitle = document.getElementById('title-btn');
 
-
+var titleCheck = false;
+var priceCheck = false;
+var priceBeforeCheck = false;
+var AuthorCheck = false;
 
 listNumber = booksItems.length;
 productNumber.innerHTML = `&nbsp${listNumber}&nbsp`;
@@ -46,9 +49,9 @@ function showlist() {
       <div class="list-img-container">
         <img class='book-photo' src="${booksItems[i]?.img}"/>
         </div>
-        <div class="title">${booksItems[i]?.title} </div>
-       <div class="price">${booksItems[i]?.price} </div>
-       <div class="author">${booksItems[i]?.author} </div>
+        <div class="title">Titel : ${booksItems[i]?.title} </div>
+       <div class="price">Price:${booksItems[i]?.price} </div>
+       <div class="author">Author :${booksItems[i]?.author} </div>
        <div class="btns-container">
        <button id="delete" onclick={deleteBook(${i})} ><i class="fa-solid fa-trash-can "></i>Delete</button>
        <button id="edit" onclick={edit(${i})} ><i class="fa-solid fa-pencil"></i>Edit</button>
@@ -68,9 +71,50 @@ showlist();
 
 //function to delete item
 function deleteBook(index) {
-    booksItems.splice(index, 1);
-    localStorage.setItem('arrivals', JSON.stringify(booksItems));
-    window.location.reload();
+
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: true
+    })
+
+    swalWithBootstrapButtons.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+
+
+            booksItems.splice(index, 1);
+            localStorage.setItem('arrivals', JSON.stringify(booksItems));
+            window.location.reload();
+
+            swalWithBootstrapButtons.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+            )
+        } else if (
+            /* Read more about handling dismissals below */
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your imaginary file is safe :)',
+                'error'
+            )
+        }
+    })
+
+
 }
 
 
@@ -91,6 +135,12 @@ function edit(index) {
     updatePriceBefore.value = book.oldPrice || 0;
     updatePrice.value = book.price;
     updateAuthorName.value = book.author;
+    updateDescription.value=book.desc;
+    titleCheck= true;
+    priceCheck = true;
+    priceBeforeCheck= true;
+    AuthorCheck= true;
+    disabledOrNot();
 }
 
 
@@ -102,10 +152,23 @@ updateBtn.onclick = function updateItem() {
     var arrivals = JSON.parse(localStorage.getItem('arrivals')) || [];
     arrivals.splice(itemIndex, 1, book);
     localStorage.setItem("arrivals", JSON.stringify(arrivals));
+    titleCheck = false;
+    priceCheck = false;
+    priceBeforeCheck = false;
+    AuthorCheck = false;
+    disabledOrNot();
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Your Book add successfully',
+        showConfirmButton: false,
+        timer: 1500
+    })
     outerUpdate.style.display = "none"
     listContainer.style.display = "block"
     ContainerTitle.style.display = "block"
     location.reload();
+    
 }
 
 
@@ -113,7 +176,7 @@ updateBtn.onclick = function updateItem() {
 
 //function to add image 
 //to get the files chosen 
-document.querySelector("#add-file").addEventListener('change', function() {
+document.querySelector("#add-file").addEventListener('change', function () {
     //to cconver the file into data url ->> url that contains the information about the real file 
     const reader = new FileReader(this.files[0]);
     //event listener on load 
@@ -131,3 +194,98 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#img-added").setAttribute("src", recentImgDataUrl)
     }
 })
+
+
+function disabledOrNot() {
+    if (titleCheck && priceCheck && AuthorCheck && priceBeforeCheck) {
+        Add.removeAttribute("disabled");
+
+    } else {
+        Add.setAttribute("disabled", "true");
+    }
+}
+
+updateTitle.onkeyup = function () {
+    var namePattern = /^[a-zA-Z].*[\s\.]*$/g;
+    if (namePattern.test(updateTitle.value)) {
+        titleCheck = true;
+        disabledOrNot();
+        updateTitle.classList.add('is-valid');
+        updateTitle.classList.remove('is-invalid');
+        nameAlert.classList.add('d-none');
+    } else {
+        titleCheck = false;
+        disabledOrNot();
+        updateTitle.classList.add('is-invalid');
+        updateTitle.classList.remove('is-valid');
+        nameAlert.classList.remove('d-none');
+
+    }
+}
+
+
+
+updateAuthorName.onkeyup = function () {
+    var namePattern = /^[A-Z][a-z]{2,7}$/;
+    if (namePattern.test(updateAuthorName.value)) {
+        AuthorCheck = true;
+        disabledOrNot();
+        updateAuthorName.classList.add('is-valid');
+        updateAuthorName.classList.remove('is-invalid');
+
+    } else {
+        AuthorCheck = false;
+        disabledOrNot();
+        updateAuthorName.classList.add('is-invalid');
+        updateAuthorName.classList.remove('is-valid');
+
+
+    }
+}
+
+
+
+updatePrice.onkeyup = function () {
+    var namePattern = /\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?/;
+    if (namePattern.test(updatePrice.value)) {
+        priceCheck = true;
+        disabledOrNot();
+        updatePrice.classList.add('is-valid');
+        updatePrice.classList.remove('is-invalid');
+        nameAlert.classList.add('d-none');
+    } else {
+        priceCheck = false;
+        disabledOrNot();
+        updatePrice.classList.add('is-invalid');
+        updatePrice.classList.remove('is-valid');
+        nameAlert.classList.remove('d-none');
+
+    }
+}
+
+updatePriceBefore.onkeyup = function () {
+    var namePattern = /\d{1,3}(?:[.,]\d{3})*(?:[.,]\d{2})?/;
+    if (namePattern.test(updatePriceBefore.value)) {
+        priceBeforeCheck = true;
+        disabledOrNot();
+        updatePriceBefore.classList.add('is-valid');
+        updatePriceBefore.classList.remove('is-invalid');
+        nameAlert.classList.add('d-none');
+    } else {
+        priceBeforeCheck = false;
+        disabledOrNot();
+        updatePriceBefore.classList.add('is-invalid');
+        updatePriceBefore.classList.remove('is-valid');
+        nameAlert.classList.remove('d-none');
+
+    }
+}
+
+function disabledOrNot() {
+    if (titleCheck && priceCheck && AuthorCheck && priceBeforeCheck) {
+        updateBtn.removeAttribute("disabled");
+
+    } else {
+        updateBtn.setAttribute("disabled", "true");
+    }
+}
