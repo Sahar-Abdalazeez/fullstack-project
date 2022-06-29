@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/Css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/authors.css">
+    <link rel='stylesheet' href='./assets/css/all.min.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+ 
+</head>
+<body>
+<div class="main-author-container">
+     <!--start our services -->
+     <div>
+        <p class="text-center text-uppercase lightGrey">o u r  s e r v i ce s</p>
+        <h2 class="text-center text-capitalize">authors of the month</h2>
+        <p class="text-center text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel esseq</p> 
+    </div>
+
+    <div class="theTeam d-flex justify-content-around mt-5 ">
+       
+    </div>
+    <div class="add-course">  
+        <div class="container">
+            <h1 class="curd-title">edit authors</h1>
+        <label for="">Title</label>
+        <input   class="inputs" type="text" placeholder="Title"  id="title">
+        <!-- <div class="error">please start with capital later</div> -->
+        <label for="">Name</label>
+        <input class="inputs"  type="text" placeholder="Name"  id="name">
+       
+        <label for="">Author Info</label>
+        <textarea class="inputs" placeholder="Author Info" id="authorInfo"></textarea>
+        <div class="container btns-div d-flex">
+            <button class="add_btn btn btn-primary" id="click" >Add author</button>
+            <button class="clr-btn btn btn-danger"> <i class="fa-solid fa-trash-can "></i>clear all</button>
+            <button class="input-file-selector btn btn-outline-dark">choose image</button>
+            <input type="file" class="img-file" id="image-file">
+        </div>
+    </div>
+
+    
+
+    </div>
+
+
+    <table class="border border-1 border-dark table table-dark table-striped w-100" cellspacing="0" ">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>title</th>
+                <th>name</th>
+                <th>info</th>
+                <th>image</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+
+         <tbody id="data">
+    
+        </tbody> 
+    </table>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.js" integrity="sha512-F3F53+tMh/CBxMQ60GN5R4EiFW7PcuND+9IDC3Qpkwc7SfxgzHigRdUO3+2+mNal2ot3Wp6KR0zx8r8BbsW+Bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="./assets/js/authors.js"></script>
+</body>
+</html>
