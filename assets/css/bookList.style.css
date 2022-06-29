@@ -343,3 +343,16 @@ textarea {
     border-color: #ededed;
     border-radius: 4px;
 }
+
+
+.fa-clipboard-list,.fa-wrench{
+    font-size: 35px;
+    color: #3bb77e;
+    margin-right: 20px;
+}
+
+.fa-square-plus, .fa-sliders, .fa-images,.fa-screwdriver-wrench{
+    font-size: 35px;
+    color: #3bb77e;
+    margin-right: 20px;
+}

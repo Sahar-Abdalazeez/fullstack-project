@@ -6,10 +6,11 @@ const priceBeforeDiscount = document.getElementById('price-before');
 const bookType = document.getElementById('book-type');
 const superCategory = document.getElementById('super-category');
 const Add = document.getElementById('add');
-
+const error= document.getElementById('title-error');
+const moreErrors=document.getElementById('other-errors');
 var mybooks = JSON.parse(localStorage.getItem('arrivals'));
 
-
+console.log(error)
 //function to get data from inputs 
 function getData() {
     var bookPrice = price.value;
@@ -42,10 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const recentImgDataUrl = localStorage.getItem('recent-img');
     if (recentImgDataUrl) {
         document.querySelector("#img-added").setAttribute("src", recentImgDataUrl)
+            //  location.reload()
     }
 })
-
-
 
 //function to clear data inputs 
 function clear() {
@@ -53,7 +53,7 @@ function clear() {
     title.value = '';
     description.value = '';
     priceBeforeDiscount.value = ''
-    authorName.value = '';
+    author.value = '';
     superType.value = '';
     bookType.value = '';
 }
@@ -62,8 +62,33 @@ function clear() {
 //add the book to local storage 
 Add.onclick = function addBook() {
     let book = getData();
+  console.log(book?.author.length)
+    if(! book?.title?.length){
+        error.value=`book title is required `;
+    }else if(!book?.author.length){
+        moreErrors.value=`author name is required `;
+    }else if(!book?.price.length){
+        moreErrors.value=`book price  is required `;
+    }
+    else {
+        error.value=``;
     var arrivals = JSON.parse(localStorage.getItem('arrivals'));
     arrivals.push(book);
     localStorage.setItem("arrivals", JSON.stringify(arrivals));
-    clear() 
+    clear() ;
+    }
+ }
+
+ title.onkeypress=function clearTitleError(){
+    error.value=``;
+
+ }
+
+ author.onkeypress=function clearAuthorError(){
+    moreErrors.value=``;
+
+ }
+ price.onkeypress=function clearPriceError(){
+    moreErrors.value=``;
+
  }

@@ -24,7 +24,7 @@ productNumber.innerHTML = `&nbsp${listNumber}&nbsp`;
 function getData() {
     var bookPrice = updatePrice.value;
     var booktTitle = updateTitle.value;
-    var bookDesc = updateDescription.value;
+    var bookDesc = updateDescription.value || '';
     var oldPrice = updatePriceBefore.value;
     var authorName = updateAuthorName.value;
     var type = updateType.value;
@@ -87,7 +87,7 @@ function edit(index) {
     listContainer.style.display = "none"
     ContainerTitle.style.display = "none"
     updateTitle.value = book.title;
-    updateDescription.value = book.description;
+    // updateDescription.value = book.description;
     updatePriceBefore.value = book.oldPrice || 0;
     updatePrice.value = book.price;
     updateAuthorName.value = book.author;
@@ -102,7 +102,10 @@ updateBtn.onclick = function updateItem() {
     var arrivals = JSON.parse(localStorage.getItem('arrivals')) || [];
     arrivals.splice(itemIndex, 1, book);
     localStorage.setItem("arrivals", JSON.stringify(arrivals));
-
+    outerUpdate.style.display = "none"
+    listContainer.style.display = "block"
+    ContainerTitle.style.display = "block"
+    location.reload();
 }
 
 

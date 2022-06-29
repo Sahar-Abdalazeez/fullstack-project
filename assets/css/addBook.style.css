@@ -15,7 +15,7 @@
     padding-left: 10%;
     padding-right: 10%;
     flex-direction: column;
-    padding-top: 8%;
+    padding-top: 4%;
     padding-bottom: 5%;
 }
 
@@ -201,4 +201,18 @@ textarea {
     padding: 8px 15px;
     color: white;
     margin-left: auto;
+}
+
+#title-error{
+    color : red
+}
+
+#other-errors{
+    color : red
+}
+
+.fa-square-plus, .fa-sliders, .fa-images,.fa-screwdriver-wrench{
+    font-size: 35px;
+    color: #3bb77e;
+    margin-right: 20px;
 }
