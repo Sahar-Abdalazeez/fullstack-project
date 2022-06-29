@@ -49,9 +49,9 @@ function showlist() {
       <div class="list-img-container">
         <img class='book-photo' src="${booksItems[i]?.img}"/>
         </div>
-        <div class="title">Titel : ${booksItems[i]?.title} </div>
-       <div class="price">Price:${booksItems[i]?.price} </div>
-       <div class="author">Author :${booksItems[i]?.author} </div>
+        <div class="title">${booksItems[i]?.title} </div>
+       <div class="price">${booksItems[i]?.price} </div>
+       <div class="author">${booksItems[i]?.author} </div>
        <div class="btns-container">
        <button id="delete" onclick={deleteBook(${i})} ><i class="fa-solid fa-trash-can "></i>Delete</button>
        <button id="edit" onclick={edit(${i})} ><i class="fa-solid fa-pencil"></i>Edit</button>
