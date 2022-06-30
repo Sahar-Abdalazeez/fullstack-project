@@ -476,18 +476,20 @@ for(let i = 0; i < carouselBulletKeys.length; i++){             // THIS CONNECTS
 
 // popup log in window/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// let loginbtnclicked="false";
+// let loginbtnclicked=false;
 // localStorage.setItem('loginStatus', loginbtnclicked);
+// console.log(loginbtnclicked);
 
 
 
 let loginbtnclicked = localStorage.getItem('loginStatus');
 
+
 for(let i=0;i<adminTabs.length;i++){
-    if(loginbtnclicked == 'true'){
+    if(loginbtnclicked == "true"){
         loginBtn[0].innerHTML='Log out';
         loginBtn[1].innerHTML='Log out';
-    }else if(loginbtnclicked == 'false'){
+    }else if(loginbtnclicked == "false"){
         loginBtn[0].innerHTML='Log in';
         loginBtn[1].innerHTML='Log in';
         adminTabs[i].style.display = 'none'; // to hide the admin tab when the page loads
