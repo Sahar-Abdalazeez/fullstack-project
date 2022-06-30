@@ -1,6 +1,6 @@
-let title = document.querySelector('#title');
-let authorName = document.querySelector('#name');
-let authorInfo = document.querySelector('#authorInfo');
+let title = document.querySelector('.title_input');
+let authorName = document.querySelector('.name');
+let authorInfo = document.querySelector('.authorInfo');
 let addBtn = document.querySelector(".add_btn");
 let inputFileSelector = document.querySelector('.input-file-selector');
 let data =document.querySelector("#data");
@@ -18,6 +18,9 @@ let authorsIndex;
 let author;
 let servicesImg = document.querySelectorAll(".services-img");
 let inputs = document.querySelectorAll(".inputs");
+let labelError = document.querySelector(".labelError");
+let labelErrorF = document.querySelector(".labelErrorF");
+let labelErrorS = document.querySelector(".labelErrorS");
 let authors=[
     author ={
     
@@ -48,22 +51,16 @@ author ={
     AuthorInfo:'Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Quia, Eum.'
 }
 ];
-
-console.log('data', data);
-
 inputFileSelector.onclick=()=>{
     imgFiles.click();
 }
 // displayData();
 // displayDataInTable();
-
 if(localStorage.getItem("authors")){
     authors=JSON.parse(localStorage.getItem("authors"));
     displayDataInTable();
     displayData();
 }
-
-
 addBtn.addEventListener("click",()=>{
     if(addBtn.innerHTML=="update Author"){
         updateRow();
@@ -78,9 +75,6 @@ addBtn.addEventListener("click",()=>{
         
     localStorage.setItem("authors",JSON.stringify(authors));
 })
-
-
-
 imgFiles.addEventListener("change", function(){
     const reader = new FileReader();
     reader.addEventListener('load', ()=>{
@@ -88,7 +82,6 @@ imgFiles.addEventListener("change", function(){
     }) 
     reader.readAsDataURL(this.files[0]);
 });
-
 function addAuthor(){
      author ={
         image:img,
@@ -97,10 +90,8 @@ function addAuthor(){
         AuthorInfo:authorInfo.value
     }
     authors.push(author);
-    console.log('authors',authors);
     displayDataInTable();
 }
-
 function displayDataInTable(){
     let result='';
     for(let i=0;i<authors.length;i++){
@@ -125,7 +116,6 @@ function getAuthorsData(i){
     authorInfo.value=authors[i].AuthorInfo;
     tabelIndex=i;
 }
-
 function updateRow(){
     if(img==undefined){
         authors[tabelIndex].Title=title.value;
@@ -142,14 +132,11 @@ function updateRow(){
     clearInputs();
     addBtn.innerHTML="Add author";
 }
-
 function clearInputs(){
      for(let i=0;i<inputs.length;i++){
         inputs[i].value="";
     }
 }
-
-
 function displayData(){
     let result='';
     for(let i =0; i <authors.length;i++){
@@ -158,15 +145,13 @@ function displayData(){
             <img src="${authors[i].image}" alt="${authors[i].Name}" class="services-img" >
             <p class="table_title text-center text-uppercase lightGrey mt-4">${authors[i].Title}</p>
             <h3 class="table_name text-capitalize">${authors[i].Name}</h3>
-            <p class="table_info text-capitalize px-5 mx-5">${authors[i].AuthorInfo}</p>
+            <p class="table_info text-capitalize ">${authors[i].AuthorInfo}</p>
         </div>
         `
     }
     theTeamDiv.innerHTML=result;
     localStorage.setItem("authors",JSON.stringify(authors));
 }
-
-
 function deleteTableAuthor(i){
     authors.splice(i,1);
     authorsIndex =i;
@@ -174,7 +159,6 @@ function deleteTableAuthor(i){
     displayData();
     localStorage.setItem("authors",JSON.stringify(authors));
 }
-
 function clearAllTableData(){
     authors=[];
     data.innerHTML="";
@@ -182,7 +166,51 @@ function clearAllTableData(){
     displayData();
     localStorage.setItem("authors",JSON.stringify(authors));
 }
-
 clearAll.addEventListener("click",()=>{
     clearAllTableData();
 })
+
+labelError.classList.add("d-none");
+title.onkeyup=function(){
+    var authorPattern= /^[A-Z][^0123456789!@#$%^&*()_+{}|":?>/*-+<`]{2,15}$/;
+    if(authorPattern.test(title.value)){
+        addBtn.removeAttribute("disabled");
+        title.classList.add('is-valid');
+        title.classList.remove('is-invalid');
+        labelError.classList.add("d-none")
+    }else{
+        addBtn.setAttribute="disabled","true";
+        title.classList.replace('is-valid','is-invalid');
+        labelError.classList.remove("d-none");
+    }
+}
+
+labelErrorF.classList.add("d-none");
+authorName.onkeyup=function(){
+    var authorPattern= /^[A-Z][^0123456789!@#$%^&*()_+{}|":?>/*-+<`]{2,15}$/;
+    if(authorPattern.test(authorName.value)){
+        addBtn.removeAttribute("disabled");
+        authorName.classList.add('is-valid');
+        authorName.classList.remove('is-invalid');
+        labelErrorF.classList.add("d-none")
+    }else{
+        addBtn.setAttribute="disabled","true";
+        authorName.classList.replace('is-valid','is-invalid');
+        labelErrorF.classList.remove("d-none");
+    }
+}
+
+labelErrorS.classList.add("d-none");
+authorInfoTextA.onkeyup=function(){
+    var authorPattern= /^[A-Z][^0123456789!@#$%^&*()_+{}|":?>/*-+<`]{2,100}$/;
+    if(authorPattern.test(authorInfoTextA.value)){
+        addBtn.removeAttribute("disabled");
+        authorInfoTextA.classList.add('is-valid');
+        authorInfoTextA.classList.remove('is-invalid');
+        labelErrorS.classList.add("d-none")
+    }else{
+        addBtn.setAttribute="disabled","true";
+        authorInfoTextA.classList.replace('is-valid','is-invalid');
+        labelErrorS.classList.remove("d-none");
+    }
+}
