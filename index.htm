@@ -1,631 +1,159 @@
 <!DOCTYPE html>
-<html class="html" lang="en">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore</title>
-    <link rel="stylesheet" href="./assets/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/bookstore-Style.css">
-    <link rel="stylesheet" href="./assets/css/style_responsive.css">
-    <!--Custom  Books css -->
-    <link rel="stylesheet" href="./assets/css/books.style.css">
-    <!--responsive Books custom css-->
-    <link rel="stylesheet" href="./assets/css/books.responsive.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/personal Style.css">
+    <link rel="stylesheet" href="css/style_responsive.css">
 </head>
-
 <body>
-    <div class="dark-overlay">
-        <header>
-            <div class="container-fluid g-0 topBlackLayerContainer">
-                <div class="container topBlackLayer">
-                    <div>
-                        <p>free shipping for orders over $50</p>
+    <div class="wholePageContainer container-fluid">
+        <div class="inner-container container gap-0">
+            <h1 data-text="choose your destination">choose your destination</h1>
+            <div class="listParentDiv">
+                <ul class="listParent">
+                    <div class="list-item-div first-list-item-animation">
+                        <li class="list-item bookstore-link"><a href="bookstore/index.htm" target="_blank">bookstore</a></li>
                     </div>
-                    <div class="top-Icons">
-                        <a href="#"><i class="fa-brands fa-twitter top-icon"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram top-icon"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook-f top-icon"></i></a>
-                        <a href="#"><i class="fa-brands fa-dribbble top-icon"></i></a>
+                    <div class="list-item-div second-list-item-animation">
+                        <li class="list-item weather-link"><a href="weather/index.html" target="_blank">weather</a></li>
                     </div>
-                </div>
-            </div>
-            <div class="container-fluid g-0 navbar-container">
-                <nav class="row flex-nowrap g-0 nav-bar-parent">
-                    <div class=" brand-img-div">
-                        <img class="brand-img" src="img/logo.png" />
-                    </div>
-                    <!-- media qurey-->
-                    <div class="sublist-icon-div">
-                        <a href="#">
-                            <i class="fa-solid fa-bars nav-bar-sublist-icon"></i>
-                        </a>
-                    </div>
-                    <div class="tabs-parent rounded shadow">
-                        <div class="tabs-parent-div">
-                            <ul class="tabs-list-parent">
-                                <li class="tab-item tab-item-arrow">
-                                    <a class="tab-item-link" href="#">home</a>
-                                    <div class="home-first-level-sublist-div shadow rounded">
-                                        <ul class="home-first-level-sublist-parent">
-                                            <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">main home</a></li>
-                                            <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">best selling author</a></li>
-                                            <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">audiobook home</a></li>
-                                            <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">children's book</a></li>
-                                            <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">left menu home</a></li>
-                                            <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">grid home</a></li>
-                                            <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">landing</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="tab-item tab-item-arrow">
-                                    <a class="tab-item-link" href="#">pages</a>
-                                    <div class="pages-first-level-sublist-div shadow rounded">
-                                        <ul class="pages-first-level-sublist-parent">
-                                            <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">home panael</a></li>
-                                            <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">our events</a></li>
-                                            <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">coming soon</a></li>
-                                            <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">order page</a></li>
-                                            <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">contact us</a></li>
-                                            <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">pricing options</a></li>
-                                            <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">faq page</a></li>
-                                        </ul>
-                                    </div>
-
-                                </li>
-                                <li class="tab-item tab-item-arrow">
-                                    <a class="tab-item-link" href="#">Admin</a>
-                                    <div class="events-first-level-sublist-div shadow rounded">
-                                        <ul class="events-first-level-sublist-parent">
-                                            <li class="events-first-level-sublist-item"><a class="events-first-level-sublist-link" href="addBook.html">Add book</a></li>
-                                            <li class="events-first-level-sublist-item"><a class="events-first-level-sublist-link" href="booksList.html">Book List</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="tab-item tab-item-arrow">
-                                    <a class="tab-item-link" href="#">blog</a>
-                                    <div class="blog-tab-container">
-                                        <div class="blog-first-level-sublist-div shadow rounded">
-                                            <ul class="blog-first-level-sublist-parent">
-                                                <li class="blog-first-level-sublist-item"><a class="blog-first-level-sublist-link" href="#">right sidebar</a></li>
-                                                <li class="blog-first-level-sublist-item"><a class="blog-first-level-sublist-link" href="#">left sidebar</a></li>
-                                                <li class="blog-first-level-sublist-item"><a class="blog-first-level-sublist-link" href="#">no sidebar</a></li>
-                                                <li class="blog-first-level-sublist-item right-arrow">
-                                                    <a class="blog-first-level-sublist-link" href="#">blog singles</a>
-                                                    <div class="blog-second-level-sublist-div shadow rounded">
-                                                        <ul class="blog-second-level-sublist-parent">
-                                                            <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">standard</a></li>
-                                                            <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">no sidebar</a></li>
-                                                            <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">gallery</a></li>
-                                                            <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">quote</a></li>
-                                                            <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">link</a></li>
-                                                            <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">audio</a></li>
-                                                            <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">video</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="tab-item tab-item-arrow">
-                                    <a class="tab-item-link" href="#">shop</a>
-                                    <div class="shop-tab-container">
-                                        <div class="shop-first-level-sublist-div shadow rounded">
-                                            <ul class="shop-first-level-sublist-parent">
-                                                <li class="shop-first-level-sublist-item"><a class="shop-first-level-sublist-link" href="#">product list</a></li>
-                                                <li class="shop-first-level-sublist-item right-arrow">
-                                                    <a class="shop-first-level-sublist-link" href="#">product singles</a>
-                                                    <div class="shop-second-level-sublist-div product-singles-div rounded shadow">
-                                                        <ul class="shop-second-level-sublist-parent">
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">standard</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">grouped</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">variable</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">virtual</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">external</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">downloadable</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">new</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">on sale</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">out of stock</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li class="shop-first-level-sublist-item layouts-right-arrow">
-                                                    <a class="shop-first-level-sublist-link" href="#">layouts</a>
-                                                    <div class="shop-second-level-sublist-div shadow rounded layouts-div">
-                                                        <ul class="shop-second-level-sublist-parent rounded shadow">
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">two columns</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">three columns</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">four columns</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">four col. wide</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">five col. wide</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">six col. wide</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li class="shop-first-level-sublist-item pages-div-rigth-arrow">
-                                                    <a class="shop-first-level-sublist-link" href="#">pages</a>
-                                                    <div class="shop-second-level-sublist-div rounded shadow pages-div">
-                                                        <ul class="shop-second-level-sublist-parent">
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">cart</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">checkout</a></li>
-                                                            <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">my account</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end of media query  -->
-                    <div class="nav-bar-list-items-div">
-                        <ul class="nav-bar-list-parent">
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">home</a>
-                                <div class="home-tab rounded shadow">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" id="first-item-in-the-list" href="./index.htm">main home</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">bestselling author</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">audiobook home</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">childern's books</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">left menu home</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">grid home</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">landing</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">pages</a>
-                                <div class="pages-tab rounded shadow">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">about me</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">about us</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">our events</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">our premises</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">coming soon</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">orderpage</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">contact us</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">pricing options</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">faq page</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">404 error page</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">admin</a>
-                                <div class="events-tab rounded shadow">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="./addBook.html">add book</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="./booksList.html">books list </a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">blog</a>
-                                <div class="blog-overlay">
-                                    <ul class="dropdown-blog-items rounded shadow">
-                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">right sidebar</a></li>
-                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">left sidebar</a></li>
-                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">no sidebar</a></li>
-                                        <li class="sublist-hvr"><a class="dropdown-item-sublist-a" href="#">blog singles</a>
-                                            <ul class="sublist-dropdown-parent">
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">standard</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">no sidebar</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">gallery</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">quote</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">link</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">audio</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">video</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">shop</a>
-                                <div class="shop-overlay">
-                                    <ul class="shop-items-parent rounded shadow">
-                                        <li class="shop-item"><a class="shop-item-a" href="#">product list</a></li>
-                                        <li class="shop-item shop-item-product-singles-arrow-hvr"><a class="shop-item-a" href="#">product singles</a>
-                                            <ul class="products-sublist-parent">
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">standard</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">grouped</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">variable</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">virtula</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">external</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">downloadable</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">new</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">on sale</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">out of stock</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="shop-item shop-item-layouts-arrow-hvr"><a class="shop-item-a" href="#">layouts</a>
-                                            <ul class="layouts-sublist-parent">
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">tow columns</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">three columns</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">four columns</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">four col. wide</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">five col. wide</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">six col. wide</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="shop-item shop-item-pages-arrow-hvr"><a class="shop-item-a" href="#">pages</a>
-                                            <ul class="pages-sublist-parent">
-                                                <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">cart</a></li>
-                                                <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">checkout</a></li>
-                                                <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">my account</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav-bar-utilities-div">
-                        <div class="nav-bar-utilities-parent">
-                            <div class="div first-icon-div icon-div">
-                                <a href="#">
-                                    <i class="fa-solid fa-bag-shopping nav-bar-shopping-bag-icon utility-icon">
-                                    <span class="shopping-bag-counter">0</span>
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="div second-icon-div icon-div">
-                                <a href="#">
-                                    <i class="fa-solid fa-magnifying-glass nav-bar-search-icon utility-icon"></i>
-                                </a>
-                            </div>
-                            <!-- media query -->
-                            <div class="sidebar-left-arrow-icon-div">
-                                <i class="fa-solid fa-circle-chevron-left sidebar-left-arrow-icon"></i>
-                            </div>
-                            <!-- end of media query -->
-                            <div class="div third-icon-div icon-div">
-                                <a href="#">
-                                    <i class="fa-solid fa-bars nav-bar-menu-icon utility-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <!-- second navbar -->
-            <div class="container-fluid g-0 second-navbar-container shadow rounded">
-                <nav class="row flex-nowrap g-0 nav-bar-parent">
-                    <div class=" brand-img-div">
-                        <img class="brand-img" src="img/logo.png">
-                    </div>
-                    <div class="nav-bar-list-items-div">
-                        <ul class="nav-bar-list-parent">
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">home</a>
-                                <div class="home-tab-second-navbar">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" id="first-item-in-the-list" href="./index.htm">main home</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">bestselling author</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">audiobook home</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">childern's books</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">left menu home</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">grid home</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">landing</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">pages</a>
-                                <div class="pages-tab-second-navbar">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">about me</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">about us</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">our events</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">our premises</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">coming soon</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">orderpage</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">contact us</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">pricing options</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">faq page</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">404 error page</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">admin</a>
-                                <div class="events-tab-second-navbar">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="./addBook.html">add book</a></li>
-                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="./booksList.html">books list</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">blog</a>
-                                <div class="blog-overlay-second-navbar">
-                                    <ul class="dropdown-blog-items">
-                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">right sidebar</a></li>
-                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">left sidebar</a></li>
-                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">no sidebar</a></li>
-                                        <li class="sublist-hvr"><a class="dropdown-item-sublist-a" href="#">blog singles</a>
-                                            <ul class="sublist-dropdown-parent">
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">standard</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">no sidebar</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">gallery</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">quote</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">link</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">audio</a></li>
-                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">video</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar-list-item">
-                                <a class="nav-bar-list-item-link" href="#">shop</a>
-                                <div class="shop-overlay-second-navbar shop-overlay">
-                                    <ul class="shop-items-parent">
-                                        <li class="shop-item"><a class="shop-item-a" href="#">product list</a></li>
-                                        <li class="shop-item shop-item-product-singles-arrow-hvr"><a class="shop-item-a" href="#">product singles</a>
-                                            <ul class="products-sublist-parent">
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">standard</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">grouped</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">variable</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">virtula</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">external</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">downloadable</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">new</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">on sale</a></li>
-                                                <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">out of stock</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="shop-item shop-item-layouts-arrow-hvr"><a class="shop-item-a" href="#">layouts</a>
-                                            <ul class="layouts-sublist-parent">
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">tow columns</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">three columns</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">four columns</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">four col. wide</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">five col. wide</a></li>
-                                                <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">six col. wide</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="shop-item shop-item-pages-arrow-hvr"><a class="shop-item-a" href="#">pages</a>
-                                            <ul class="pages-sublist-parent">
-                                                <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">cart</a></li>
-                                                <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">checkout</a></li>
-                                                <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">my account</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav-bar-utilities-div">
-                        <div class="nav-bar-utilities-parent">
-                            <div class="icon-div second-icon-div-2nd-navbar">
-                                <a href="#">
-                                    <i class="fa-solid fa-magnifying-glass nav-bar-search-icon utility-icon"></i>
-                                </a>
-                            </div>
-                            <!-- media query -->
-                            <div class="sidebar-left-arrow-icon-div">
-                                <i class="fa-solid fa-circle-chevron-left sidebar-left-arrow-icon"></i>
-                            </div>
-                            <!-- end of media query -->
-                            <div class="div third-icon-div icon-div">
-                                <a href="#">
-                                    <i class="fa-solid fa-bars nav-bar-menu-icon utility-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <!-- end of second navbar -->
-            <div class="container-fluid g-0 carousel-slider-container">
-                <div class="carousel-slider-parent">
-                    <i class="fa-solid fa-chevron-right carosusel-right-arrow"></i>
-                    <i class="fa-solid fa-chevron-left carosusel-left-arrow"></i>
-                    <div class="carousel-bullet-keys-div">
-                        <span class="carousel-bullet-key"></span>
-                        <span class="carousel-bullet-key"></span>
-                        <span class="carousel-bullet-key"></span>
-                    </div>
-                    <div class="images-container">
-                        <div class="img-div flex-grow-0 flex-shrink-0 IMAGINE-CLONE">
-
-                        </div>
-                        <div class="adam-wolf-img-parent img-div flex-grow-0 flex-shrink-0">
-                            <div class="adam-wolf-inner-container">
-                                <div class="adam-wolf-img-div adam-wolf-img-div-animation"><img src="img/adam-wolf.png"></div>
-                                <div class="love-img-div love-img-div-animation"><img src="img/love.png"></div>
-                                <div class="red-circle-div red-circle-div-animation"><img src="img/red-circle1.png"></div>
-                                <div class="eiffel-tower-div love-img-div-animation"><img src="img/eiffel-tower.png"></div>
-                                <div class="adam-wolf-para-pool">
-                                    <p class="adam-wolf-para-pool-1st-para-animation">it's chapter one </p>
-                                    <p class="adam-wolf-para-pool-2nd-para-animation">We love literature</p>
-                                    <p class="adam-wolf-para-pool-3rd-para-animation">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                                </div>
-                                <button class="adam-wolf-read-more-btn adam-wolf-read-more-btn-animation" type="button">read more</button>
-                            </div>
-                        </div>
-                        <div class="night-img-parent img-div flex-grow-0 flex-shrink-0">
-                            <div class="night-img-div">
-                                <img src="img/night-wallpaper.jpg">
-                            </div>
-                            <div class="moon-para-div">
-                                <p>it's chapter one</p>
-                            </div>
-                            <div class="night-img-second-para">
-                                <p>your world of words</p>
-                            </div>
-                            <div class="night-img-third-para">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam at nisi voluptatibus, odit laborum dolore temporibus necessitatibus quisquam!</p>
-                            </div>
-                            <button class="night-img-read-more-btn" type="button">read more</button>
-                        </div>
-                        <div class="imagine-img-parent img-div flex-grow-0 flex-shrink-0">
-                            <div class="imagine-inner-container">
-                                <div class="imagine-img-div">
-                                    <img src="img/home-2-slide-3-image-1b.jpg">
-                                </div>
-                                <div class="red-circle-imagine-div">
-                                    <img src="img/red-circle1.png">
-                                </div>
-                                <div class="imagine-para-pool">
-                                    <p>it's chapter one </p>
-                                    <p>The all-time classics</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                                </div>
-                                <button class="imagine-read-more-btn" type="button">read more</button>
-                            </div>
-                        </div>
-                        <div class="img-div flex-grow-0 flex-shrink-0  ADAMWOLF-CLONE"></div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </div>
-
-
-    <div class="sidebar-parent shadow rounded">
-        <div class="sidebar-content">
-            <div class="close-btn-sidebar-div">
-                <i class="fa-solid fa-xmark close-icon"></i>
-            </div>
-            <div class="sidebar-conttainer">
-                <div class="sidebar-img-div">
-                    <img class="sidebar-img" src="img/logo-side.png">
-                </div>
-                <div class="side-bar-links">
-                    <a class="side-bar-icon-parent" href="#"><i class="fa-solid fa-location-dot side-bar-icon"></i>Lorem ipsum dolor sit.</a>
-                    <a class="side-bar-icon-parent" href="#"><i class="fa-solid fa-phone side-bar-icon"></i>00970598755328</a>
-                    <a class="side-bar-icon-parent" href="#"><i class="fa-solid fa-envelope side-bar-icon"></i>Loremipsumdolor@gmail.com</a>
-                </div>
-                <form class="side-bar-form">
-                    <input class="side-bar-email" type="email" placeholder="email">
-                    <button class="side-bar-subscribe" type="submit">subscribe</button>
-                </form>
-                <div class="sidebar-bottom-icons-parent ">
-                    <a href="#"><i class="fa-brands fa-twitter sidebar-bottom-icons"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram sidebar-bottom-icons"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f sidebar-bottom-icons"></i></a>
-                    <a href="#"><i class="fa-brands fa-dribbble sidebar-bottom-icons"></i></a>
-                </div>
-                <div class="side-bar-bottom-para-parent">
-                    <p class="side-bar-bottom-para">free shipping <br> for orders over 50%</p>
-                </div>
+                    <div class="list-item-div third-list-item-animation">
+                        <li class="list-item" id="aboutUsTab"><a href="#"></a>about us</li>
+                    </div> 
+                </ul>
             </div>
         </div>
     </div>
-
-
-    <!-- show Books -->
-    <div>
-        <h2>New Arrivals </h2>
-        <div class="btns-container">
-            <button type="button" id="all">All </button>
-            <button type="button" id="fantacy">Fantacy </button>
-            <button type="button" id="cooking">Cooking</button>
-
+    <!-- media query content -->
+        <div class="about-us-window-div">
+            <div class="about-us-window-inner-container rounded shadow">
+                <div class="ayman-bio flex-grow-0 flex-shrink-0 rounded shadow">
+                    <div class="user-pic-div">
+                            <img src="img/ayman-pic.JPG">
+                    </div>
+                    <div class="user-bio-para-pool flex-grow-0 flex-shrink-0">
+                        <a href="https://www.linkedin.com/in/ayman-maani/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/AymanQ-A-Maani" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p><span class="name-span">Name</span>: Ayman Maani</p>
+                        <p><span class="bio-span">Bio</span>: Business Administration graduate, Web developer on the rise, youtuber and a poet. Aspires to become a game developer.</p>  
+                    </div>
+                </div>
+                <div class="momen-bio flex-grow-0 flex-shrink-0 rounded shadow">
+                    <div class="user-pic-div">
+                        <img src="img/Momen.jpg">
+                    </div>
+                    <div class="user-bio-para-pool flex-grow-0 flex-shrink-0">
+                        <a href="https://www.linkedin.com/in/momen-ajarmah-5644001a4" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Momen-Ajarmah" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p><span class="name-span">Name</span>: Momen Ajarmah</p>
+                        <p><span class="bio-span">Bio</span>: Law student graduate from An-Najah National University. Aspires to become a full-stack developer.</p>  
+                    </div>
+                </div>
+                <div class="mohammad-bio flex-grow-0 flex-shrink-0 rounded shadow">
+                    <div class="user-pic-div">
+                        <img src="img/mohammad.jpg">
+                    </div>
+                    <div class="user-bio-para-pool flex-grow-0 flex-shrink-0">
+                        <a href="https://www.linkedin.com/in/mohammad-jaber-85238821b" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Mohamad-jaber" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p><span class="name-span">Name</span>: Mohammad jaber</p>
+                        <p><span class="bio-span">Bio</span>: Studying computer engineering at Palestine Technical University - Kadorie.</p>  
+                    </div>
+                </div>
+                <div class="sahar-bio flex-grow-0 flex-shrink-0 rounded shadow">
+                    <div class="user-pic-div">
+                        <img src="img/default-user-profile-pic.jpg">
+                    </div>
+                    <div class="user-bio-para-pool flex-grow-0 flex-shrink-0">
+                        <a href="https://www.linkedin.com/in/sahar-abdalaziz-3912521aa" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Sahar-Abdalazeez" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p><span class="name-span">Name</span>: Sahar Samer</p>
+                        <p><span class="bio-span">Bio</span>: Computer Engineering graduate, Currently working for AUI company as a frontend engineer.</p>  
+                    </div>
+                </div>
+                <div class="about-us-description-inner-container">
+                    <p>We are a group of 4 full-stack developers on the rise, who have come together to accomplish a task of building a website that is set to demonstrate considerable interpersonal skills in web development such as problem-solving, research, teamwork, leadership, and time management skills, as well as coding skills in HTML, CSS3, Bootstrap and JavaScript, during 8 months of intensive <span><a class="fullstack-link" href="https://www.facebook.com/groups/968128413284614">full-stack Bootcamp</a></span> experience. This website consists of 3 main pages: the navigation panel (the one you are on right now), the bookstore, and the weather page which is an API. Furthermore, this website was hardcoded without any third-party plugins, all the heavy lifting was built up in JavaScript. And lastly, it's responsive on all screen sizes.</p>
+                </div>
+            </div>
         </div>
-        <div class="arrivals" id="arrivals"> </div>
-    </div>
-
-    <footer>
-        <div class="footer-info text-white p-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h3>publisher</h3>
-                        <ul class="publisher-item mt-4">
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Bestsellers</a></li>
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Interviews</a></li>
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Authors Story</a></li>
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Book Fairs</a></li>
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Help (FAQ)</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <div>
-                            <h3>Contact</h3>
-                            <p class="mt-4">Stay in touch with everything ChapterOne, follow us on social media and
-                                learn about new promotions.</p>
-                        </div>
-                        <div>
-                            <a href="#" class="pe-2 text-white"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#" class="pe-2 text-white"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="pe-2 text-white"><i class="fa-brands fa-facebook"></i> </a>
+    <!-- end of media query contet -->
+    <div class="signImageDiv">
+        <div class="signImageDiv-inner-container">
+            <img class="signImage" src="img/sign.png">
+            <div class="bios-div">
+                <div class="bios-inner-container">
+                    <div class="about-us-description">
+                        <div class="about-us-description-inner-container">
+                            <p>We are a group of 4 full-stack developers on the rise, who have come together to accomplish a task of building a website that is set to demonstrate considerable interpersonal skills in web development such as problem-solving, research, teamwork, leadership, and time management skills, as well as coding skills in HTML, CSS3, Bootstrap and JavaScript, during 8 months of intensive <span><a class="fullstack-link" href="https://www.facebook.com/groups/968128413284614">full-stack Bootcamp</a></span> experience. This website consists of 3 main pages: the navigation panel (the one you are on right now), the bookstore, and the weather page which is an API. Furthermore, this website was hardcoded without any third-party plugins, all the heavy lifting was built up in JavaScript. And lastly, it's responsive on all screen sizes.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <h3>News & Update</h3>
-                        <p class="mt-4">We’d love it if you subscribed to our newsletter! You’ll love it too.</p>
-
+                    <!-- media query for about us description -->
+                    <a class="right-arrow" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                    <a class="left-arrow" href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                    <div class="about-us-description-media">
+                        <div class="about-us-description-inner-container-media">
+                            <p>We are a group of 4 full-stack developers on the rise, who have come together to accomplish a task of building a website that is set to demonstrate considerable interpersonal skills in web development such as problem-solving, research, teamwork, leadership, and time management skills, as well as coding skills in HTML, CSS3, Bootstrap and JavaScript, during 8 months of intensive <span><a class="fullstack-link" href="https://www.facebook.com/groups/968128413284614">full-stack Bootcamp</a></span> experience. This website consists of 3 main pages: the navigation panel (the one you are on right now), the bookstore, and the weather page which is an API. Furthermore, this website was hardcoded without any third-party plugins, all the heavy lifting was built up in JavaScript. And lastly, it's responsive on all screen sizes.</p>
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        <h3>Social media</h3>
-                        <div class="mt-4 d-flex  flex-wrap justify-content-evenly ">
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
-                                </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white" >
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
-                                </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
-                                </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
-                                </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
-                                </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
-                                </div>
-
-                            </a>
+                    <!-- end of media query for about us description -->
+                    <div class="first-two-bios-container">
+                        <div class="ayman-bio flex-grow-0 flex-shrink-0 rounded shadow">
+                            <div class="user-pic-div">
+                                    <img src="img/ayman-pic.JPG">
+                            </div>
+                            <div class="user-bio-para-pool flex-grow-0 flex-shrink-0">
+                                <a href="https://www.linkedin.com/in/ayman-maani/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/AymanQ-A-Maani" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <p><span class="name-span">Name</span>: Ayman Maani</p>
+                                <p><span class="bio-span">Bio</span>: Business Administration graduate, Web developer on the rise, youtuber and a poet. Aspires to become a game developer.</p>  
+                            </div>
+                        </div>
+                        <div class="momen-bio flex-grow-0 flex-shrink-0 rounded shadow">
+                            <div class="user-pic-div">
+                                <img src="img/Momen.jpg">
+                            </div>
+                            <div class="user-bio-para-pool flex-grow-0 flex-shrink-0">
+                                <a href="https://www.linkedin.com/in/momen-ajarmah-5644001a4" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/Momen-Ajarmah" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <p><span class="name-span">Name</span>: Momen Ajarmah</p>
+                                <p><span class="bio-span">Bio</span>: Law student graduate from An-Najah National University. Aspires to become a full-stack developer.</p>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-two-bios-container">
+                        <div class="mohammad-bio flex-grow-0 flex-shrink-0 rounded shadow">
+                            <div class="user-pic-div">
+                                <img src="img/mohammad.jpg">
+                            </div>
+                            <div class="user-bio-para-pool flex-grow-0 flex-shrink-0">
+                                <a href="https://www.linkedin.com/in/mohammad-jaber-85238821b" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/Mohamad-jaber" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <p><span class="name-span">Name</span>: Mohammad jaber</p>
+                                <p><span class="bio-span">Bio</span>: Studying Computer Engineering at Palestine Technical University - Kadorie.</p>  
+                            </div>
+                        </div>
+                        <div class="sahar-bio flex-grow-0 flex-shrink-0 rounded shadow">
+                            <div class="user-pic-div">
+                                <img src="img/default-user-profile-pic.jpg">
+                            </div>
+                            <div class="user-bio-para-pool flex-grow-0 flex-shrink-0">
+                                <a href="https://www.linkedin.com/in/sahar-abdalaziz-3912521aa" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/Sahar-Abdalazeez" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <p><span class="name-span">Name</span>: Sahar Samer</p>
+                                <p><span class="bio-span">Bio</span>: Computer Engineering graduate, Currently working for AUI company as a frontend engineer.</p>  
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-
-
-    <!--Bootstrap js 5-->
-
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/bookstore-JavaScript.js"></script>
-    <script src="./assets/js/book.js"></script>
-
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/personal Js.js"></script>
 </body>
-
 </html>

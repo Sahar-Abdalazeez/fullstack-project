@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--sweet alert-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.css" rel="stylesheet">
+    <!--Bootstrap 5-->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- font awesom v-6 -->
+    <link rel='stylesheet' href='./assets/css/all.min.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!--custom styled for the list -->
+    <link rel="stylesheet" href="./assets/css/bookList.style.css">
+    <!--custom styled for add book container  -->
+    <link rel="stylesheet" href="./assets/css/addBook.style.css">
+    <!--responsive style for the list -->
+    <link rel="stylesheet" href="./assets/css/bookList.responsive.css">
+    <!--custom responsive style-->
+    <link rel="stylesheet" href="./assets/css/addBook.responsive.css">
+    <link rel="stylesheet" href="./assets/css/bookstore-Style.css">
+    <link rel="stylesheet" href="./assets/css/style_responsive.css">
+    
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="dark-overlay">
+        <header>
+            <div class="container-fluid g-0 topBlackLayerContainer">
+                <div class="container topBlackLayer">
+                    <div><p>free shipping for orders over $50</p></div>
+                    <div class="top-Icons">
+                        <a href="#"><i class="fa-brands fa-twitter top-icon"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram top-icon"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f top-icon"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble top-icon"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid g-0 navbar-container">
+                <nav class="row flex-nowrap g-0 nav-bar-parent">
+                    <div class=" brand-img-div">
+                        <img class="brand-img" src="img/logo.png">
+                    </div>
+                    <!-- media qurey-->
+                    <div class="sublist-icon-div">
+                        <a href="#">
+                            <i class="fa-solid fa-bars nav-bar-sublist-icon"></i>
+                        </a>
+                    </div>
+                    <div class="tabs-parent rounded shadow">
+                            <div class="tabs-parent-div">
+                                <ul class="tabs-list-parent">
+                                    <li class="tab-item tab-item-arrow">
+                                        <a class="tab-item-link" href="#">home</a>
+                                        <div class="home-first-level-sublist-div shadow rounded">
+                                            <ul class="home-first-level-sublist-parent">
+                                                <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="index.htm">main home</a></li>
+                                                <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">best selling author</a></li>
+                                                <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">audiobook home</a></li>
+                                                <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">children's book</a></li>
+                                                <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">left menu home</a></li>
+                                                <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">grid home</a></li>
+                                                <li class="home-first-level-sublist-item"><a class="home-first-level-sublist-item-link" href="#">landing</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="tab-item tab-item-arrow">
+                                        <a class="tab-item-link" href="#">pages</a>
+                                        <div class="pages-first-level-sublist-div shadow rounded">
+                                            <ul class="pages-first-level-sublist-parent">
+                                                <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">home panael</a></li>
+                                                <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">our events</a></li>
+                                                <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">coming soon</a></li>
+                                                <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">order page</a></li>
+                                                <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">contact us</a></li>
+                                                <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">pricing options</a></li>
+                                                <li class="pages-first-level-sublist-item"><a class="pages-first-level-sublist-link" href="#">faq page</a></li>
+                                            </ul>
+                                        </div>
+        
+                                    </li>
+                                    <li class="tab-item tab-item-arrow">
+                                        <a class="tab-item-link" href="#">events</a>
+                                        <div class="events-first-level-sublist-div shadow rounded">
+                                            <ul class="events-first-level-sublist-parent">
+                                                <li class="events-first-level-sublist-item"><a class="events-first-level-sublist-link" href="#">event dates</a></li>
+                                                <li class="events-first-level-sublist-item"><a class="events-first-level-sublist-link" href="#">event single</a></li>
+                                            </ul>   
+                                        </div>     
+                                    </li>
+                                    <li class="tab-item tab-item-arrow">
+                                        <a class="tab-item-link" href="#">blog</a>
+                                        <div class="blog-tab-container">
+                                            <div class="blog-first-level-sublist-div shadow rounded">
+                                                <ul class="blog-first-level-sublist-parent">
+                                                    <li class="blog-first-level-sublist-item"><a class="blog-first-level-sublist-link" href="#">right sidebar</a></li>
+                                                    <li class="blog-first-level-sublist-item"><a class="blog-first-level-sublist-link" href="#">left sidebar</a></li>
+                                                    <li class="blog-first-level-sublist-item"><a class="blog-first-level-sublist-link" href="#">no sidebar</a></li>
+                                                    <li class="blog-first-level-sublist-item right-arrow">
+                                                        <a class="blog-first-level-sublist-link" href="#">blog singles</a>
+                                                        <div class="blog-second-level-sublist-div shadow rounded">
+                                                            <ul class="blog-second-level-sublist-parent">
+                                                                <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">standard</a></li>
+                                                                <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">no sidebar</a></li>
+                                                                <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">gallery</a></li>
+                                                                <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">quote</a></li>
+                                                                <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">link</a></li>
+                                                                <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">audio</a></li>
+                                                                <li class="blog-second-level-sublist-item"><a class="blog-second-level-sublist-link" href="#">video</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tab-item tab-item-arrow">
+                                        <a class="tab-item-link" href="#">shop</a>
+                                        <div class="shop-tab-container">
+                                            <div class="shop-first-level-sublist-div shadow rounded">
+                                                <ul class="shop-first-level-sublist-parent">
+                                                    <li class="shop-first-level-sublist-item"><a class="shop-first-level-sublist-link" href="#">product list</a></li>
+                                                    <li class="shop-first-level-sublist-item right-arrow">
+                                                        <a class="shop-first-level-sublist-link" href="#">product singles</a>
+                                                        <div class="shop-second-level-sublist-div product-singles-div rounded shadow">
+                                                            <ul class="shop-second-level-sublist-parent">
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">standard</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">grouped</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">variable</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">virtual</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">external</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">downloadable</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">new</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">on sale</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">out of stock</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="shop-first-level-sublist-item layouts-right-arrow">
+                                                        <a class="shop-first-level-sublist-link" href="#">layouts</a>
+                                                        <div class="shop-second-level-sublist-div shadow rounded layouts-div">
+                                                            <ul class="shop-second-level-sublist-parent rounded shadow">
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">two columns</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">three columns</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">four columns</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">four col. wide</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">five col. wide</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">six col. wide</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="shop-first-level-sublist-item pages-div-rigth-arrow">
+                                                        <a class="shop-first-level-sublist-link" href="#">pages</a>
+                                                        <div class="shop-second-level-sublist-div rounded shadow pages-div">
+                                                            <ul class="shop-second-level-sublist-parent">
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">cart</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">checkout</a></li>
+                                                                <li class="shop-second-level-sublist-item"><a class="shop-second-level-sublist-link" href="#">my account</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tab-item admn-tab-java tab-item-arrow rounded">
+                                        <a class="tab-item-link" href="#">admin</a>
+                                        <div class="admin-first-level-sublist-div shadow rounded">
+                                            <ul class="admin-first-level-sublist-parent">
+                                                <li class="admin-first-level-sublist-item"><a class="admin-first-level-sublist-link" href="#">books list</a></li>
+                                                <li class="admin-first-level-sublist-item"><a class="admin-first-level-sublist-link" href="#">authors</a></li>
+                                                <li class="admin-first-level-sublist-item"><a class="admin-first-level-sublist-link" href="#">add book</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                    <!-- end of media query  -->
+                    <div class="nav-bar-list-items-div">
+                        <ul class="nav-bar-list-parent">
+                            <li class="nav-bar-list-item">
+                                <a class="nav-bar-list-item-link" href="#">home</a>
+                                <div class="home-tab rounded shadow">
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" id="first-item-in-the-list" href="index.htm">main home</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">bestselling author</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">audiobook home</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">childern's books</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">left menu home</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">grid home</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">landing</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-bar-list-item">
+                                <a class="nav-bar-list-item-link" href="#">pages</a>
+                                <div class="pages-tab rounded shadow">
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">about me</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">about us</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">our events</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">our premises</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">coming soon</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">orderpage</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">contact us</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">pricing options</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">faq page</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">404 error page</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-bar-list-item">
+                                <a class="nav-bar-list-item-link" href="#">events</a>
+                                <div class="events-tab rounded shadow">
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">event dates</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">event single</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-bar-list-item">
+                                <a class="nav-bar-list-item-link" href="#">blog</a>
+                                <div class="blog-overlay">
+                                    <ul class="dropdown-blog-items rounded shadow">
+                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">right sidebar</a></li>
+                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">left sidebar</a></li>
+                                        <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">no sidebar</a></li>
+                                        <li class="sublist-hvr"><a class="dropdown-item-sublist-a" href="#">blog singles</a>
+                                            <ul class="sublist-dropdown-parent rounded shadow">
+                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">standard</a></li>
+                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">no sidebar</a></li>
+                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">gallery</a></li>
+                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">quote</a></li>
+                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">link</a></li>
+                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">audio</a></li>
+                                                <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">video</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-bar-list-item">
+                                <a class="nav-bar-list-item-link" href="#">shop</a>
+                                <div class="shop-overlay">
+                                    <ul class="shop-items-parent rounded shadow">
+                                    <li class="shop-item"><a class="shop-item-a" href="#">product list</a></li>
+                                    <li class="shop-item shop-item-product-singles-arrow-hvr"><a class="shop-item-a" href="#">product singles</a>
+                                        <ul class="products-sublist-parent rounded shadow">
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">standard</a></li>
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">grouped</a></li>
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">variable</a></li>
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">virtula</a></li>
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">external</a></li>
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">downloadable</a></li>
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">new</a></li>
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">on sale</a></li>
+                                           <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">out of stock</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="shop-item shop-item-layouts-arrow-hvr"><a class="shop-item-a" href="#">layouts</a>
+                                        <ul class="layouts-sublist-parent rounded shadow">
+                                           <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">tow columns</a></li>
+                                           <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">three columns</a></li>
+                                           <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">four columns</a></li>
+                                           <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">four col. wide</a></li>
+                                           <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">five col. wide</a></li>
+                                           <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">six col. wide</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="shop-item shop-item-pages-arrow-hvr"><a class="shop-item-a" href="#">pages</a>
+                                        <ul class="pages-sublist-parent rounded shadow">
+                                           <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">cart</a></li>
+                                           <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">checkout</a></li>
+                                           <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">my account</a></li>
+                                        </ul>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-bar-list-item admn-tab-java rounded">
+                                <a class="nav-bar-list-item-link" href="#">admin</a>
+                                <div class="admin-tab  rounded shadow">
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="booksList.html">books list</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="authors.html">authors</a></li>
+                                        <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="addBook.html">add book</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-btn-div">
+                        <button class="login-btn" type="button">log in</button>
+                    </div> 
+                    <div class="nav-bar-utilities-div">
+                        <div class="nav-bar-utilities-parent">
+                            <div class="div first-icon-div icon-div">
+                                <a href="#">
+                                    <i class="fa-solid fa-bag-shopping nav-bar-shopping-bag-icon utility-icon">
+                                    <span class="shopping-bag-counter">0</span>
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="div second-icon-div icon-div"><a href="#">
+                                <i class="fa-solid fa-magnifying-glass nav-bar-search-icon utility-icon"></i>
+                            </a></div>
+                            <!-- media query -->
+                            <div class="sidebar-left-arrow-icon-div">
+                                <i class="fa-solid fa-circle-chevron-left sidebar-left-arrow-icon"></i>
+                            </div>
+                            <!-- end of media query -->
+                            <div class="div third-icon-div icon-div">
+                                <a href="#">
+                                    <i class="fa-solid fa-bars nav-bar-menu-icon utility-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>  
+            </div>
+        </header>
+        <div class="Container-list">
+            <div class="title-btn" id="title-btn">
+                <div class="list-title-container" id="list-title-container">
+    
+                    <div class="main-title"> <i class="fa-solid fa-clipboard-list"></i>Products List </div>
+                    <div class="numberOfItems">We found
+                        <p id="product-num"></p> items for you!
+                    </div>
+                </div>
+                <div> <a id="add-book" href="./addBook.html">Add Book</a></div>
+            </div>
+    
+            <div id="main-list-container" class="main-list-container"></div>
+            <div id="outer-update-container">
+                <div class="update-main-container">
+    
+                    <!--add title Container -->
+                    <div class="update-add-container">
+                        <i class="fa-solid fa-wrench"></i>
+                        <h1 class="update-add-product">Update Product</h1>
+                        <button id="update-btn">update</button>
+                    </div>
+    
+                    <!--Container for left and right parts -->
+                    <div class="update-Container">
+    
+                        <!--Left Container -->
+                        <div class="update-left-container">
+                            <div class="update-basics">
+                                <i class="fa-solid fa-sliders"></i>
+    
+                                <div class="basic-title">Basic</div>
+                            </div>
+    
+                            <div class="update-info-details">
+                                <div class="update-inputContainer">
+                                    <div class="label">product title </div>
+                                    <input type="text" class="text-input form-control" id="title" />
+                                </div>
+    
+                                <div class="update-inputContainer">
+                                    <div class="label">Description </div>
+                                    <textarea type="text" class="description form-control" id="description"></textarea>
+                                </div>
+    
+                                <div class="update-inputContainer">
+                                    <div class="update-row-inputs">
+                                        <div class="update-label-input">
+                                            <div class="label">Price </div>
+                                            <input type="text" class="text-input form-control" placeholder="$" id="price" />
+                                        </div>
+    
+                                        <div class="update-label-input">
+                                            <div class="label">Price before discount </div>
+                                            <input type="text" class="text-input form-control" placeholder="$" id="price-before" />
+                                        </div>
+                                        <div class="update-label-input">
+                                            <div class="label">Author name </div>
+                                            <input type="text" class="text-input form-control" id="author-name" />
+                                        </div>
+    
+                                    </div>
+    
+    
+                                    <div class="update-row-inputs">
+                                        <div class="update-label-input">
+                                            <div class="label">Available </div>
+                                            <input type="text" class="text-input form-control" placeholder="quantity in stock"
+                                                id="quantity" />
+                                        </div>
+    
+                                        <div class="update-label-input">
+                                            <div class="label">Pieces/Set </div>
+                                            <input type="number" min="0" class="text-input form-control" placeholder="0" id="pieces" />
+                                        </div>
+                                        <div class="update-label-input">
+                                            <div class="label">Currency </div>
+                                            <Select type="text" class="select-input" id="currency">
+                                                <option>USD</option>
+                                                <option>JOD</option>
+                                                <option>NIS</option>
+                                            </Select>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--Right Container -->
+                        <div class="update-right-container">
+    
+                            <div class="update-main-image-container">
+                                <div class="update-basics">
+                                    <div class="basic-title">
+                                        <i class="fa-solid fa-images"></i>
+                                        Main Image
+                                    </div>
+                                </div>
+    
+                                <div class="update-img-container">
+                                    <img class="img-added" id="img-added" src="" />
+                                    <input type="file" id="add-file" />
+    
+                                </div>
+    
+    
+                            </div>
+    
+                            <div class="update-categories-container">
+    
+                                <div class="update-basics">
+                                    <div class="basic-title">
+                                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                                        Categories
+                                    </div>
+                                </div>
+    
+                                <div class="update-SelectContainer">
+                                    <div class="label">Super Category</div>
+                                    <select class="update-select-input" id="super-category">
+                                        <option>Book</option>
+                                        <option>film</option>
+                                        <option>magazine</option>
+    
+    
+                                    </select>
+                                </div>
+    
+                                <div class="update-SelectContainer">
+                                    <div class="label">Main Category</div>
+                                    <select class="update-select-input" id="book-type">
+                                        <option>fantacy</option>
+                                        <option>scientific</option>
+                                        <option>cooking</option>
+                                        <option>medicine</option>
+    
+                                    </select>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- second nav bar -->
+    <div class="container-fluid g-0 second-navbar-container shadow rounded">
+        <nav class="row flex-nowrap g-0 nav-bar-parent">
+            <div class=" brand-img-div">
+                <img class="brand-img" src="img/logo.png">
+            </div>
+            <div class="nav-bar-list-items-div">
+                <ul class="nav-bar-list-parent">
+                    <li class="nav-bar-list-item">
+                        <a class="nav-bar-list-item-link" href="#">home</a>
+                        <div class="home-tab-second-navbar">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" id="first-item-in-the-list" href="index.htm">main home</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">bestselling author</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">audiobook home</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">childern's books</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">left menu home</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">grid home</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">landing</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-bar-list-item">
+                        <a class="nav-bar-list-item-link" href="#">pages</a>
+                        <div class="pages-tab-second-navbar">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">about me</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">about us</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">our events</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">our premises</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">coming soon</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">orderpage</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">contact us</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">pricing options</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">faq page</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">404 error page</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-bar-list-item">
+                        <a class="nav-bar-list-item-link" href="#">events</a>
+                        <div class="events-tab-second-navbar">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">event dates</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">event single</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-bar-list-item">
+                        <a class="nav-bar-list-item-link" href="#">blog</a>
+                        <div class="blog-overlay-second-navbar">
+                            <ul class="dropdown-blog-items">
+                                <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">right sidebar</a></li>
+                                <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">left sidebar</a></li>
+                                <li class="dropdown-blog-item"><a class="dropdown-list-item-link" href="#">no sidebar</a></li>
+                                <li class="sublist-hvr"><a class="dropdown-item-sublist-a" href="#">blog singles</a>
+                                    <ul class="sublist-dropdown-parent">
+                                        <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">standard</a></li>
+                                        <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">no sidebar</a></li>
+                                        <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">gallery</a></li>
+                                        <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">quote</a></li>
+                                        <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">link</a></li>
+                                        <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">audio</a></li>
+                                        <li class="sublist-dropdown-item"><a class="sublist-dropdown-item-a" href="#">video</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-bar-list-item">
+                        <a class="nav-bar-list-item-link" href="#">shop</a>
+                        <div class="shop-overlay-second-navbar shop-overlay">
+                            <ul class="shop-items-parent">
+                            <li class="shop-item"><a class="shop-item-a" href="#">product list</a></li>
+                            <li class="shop-item shop-item-product-singles-arrow-hvr"><a class="shop-item-a" href="#">product singles</a>
+                                <ul class="products-sublist-parent">
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">standard</a></li>
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">grouped</a></li>
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">variable</a></li>
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">virtula</a></li>
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">external</a></li>
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">downloadable</a></li>
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">new</a></li>
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">on sale</a></li>
+                                   <li class="products-sublist-item"><a class="products-sublist-item-a" href="#">out of stock</a></li>
+                                </ul>
+                            </li>
+                            <li class="shop-item shop-item-layouts-arrow-hvr"><a class="shop-item-a" href="#">layouts</a>
+                                <ul class="layouts-sublist-parent">
+                                   <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">tow columns</a></li>
+                                   <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">three columns</a></li>
+                                   <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">four columns</a></li>
+                                   <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">four col. wide</a></li>
+                                   <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">five col. wide</a></li>
+                                   <li class="layouts-sublist-item"><a class="layouts-sublist-item-a" href="#">six col. wide</a></li>
+                                </ul>
+                            </li>
+                            <li class="shop-item shop-item-pages-arrow-hvr"><a class="shop-item-a" href="#">pages</a>
+                                <ul class="pages-sublist-parent">
+                                   <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">cart</a></li>
+                                   <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">checkout</a></li>
+                                   <li class="pages-sublist-item"><a class="pages-sublist-item-a" href="#">my account</a></li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-bar-list-item admn-tab-java rounded">
+                        <a class="nav-bar-list-item-link" href="#">admin</a>
+                        <div class="admin-tab-second-navbar  rounded shadow">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">books list</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">authors</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">add book</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="login-btn-div">
+                <button class="login-btn" type="button">log in</button>
+            </div>
+            <div class="nav-bar-utilities-div">
+                <div class="nav-bar-utilities-parent">
+                    <div class="icon-div second-icon-div-2nd-navbar"><a href="#">
+                        <i class="fa-solid fa-magnifying-glass nav-bar-search-icon utility-icon"></i>
+                    </a></div>
+                    <!-- media query -->
+                    <div class="sidebar-left-arrow-icon-div">
+                        <i class="fa-solid fa-circle-chevron-left sidebar-left-arrow-icon"></i>
+                    </div>
+                    <!-- end of media query -->
+                    <div class="div third-icon-div icon-div">
+                        <a href="#">
+                            <i class="fa-solid fa-bars nav-bar-menu-icon utility-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+       <!--end of second nav bar  -->
+    <div class="sidebar-parent shadow rounded">
+        <div class="sidebar-content">
+            <div class="close-btn-sidebar-div">
+                <i class="fa-solid fa-xmark close-icon"></i>
+            </div>
+            <div class="sidebar-conttainer">
+                <div class="sidebar-img-div">
+                    <img class="sidebar-img" src="img/logo-side.png">
+                </div>
+                <div class="side-bar-links">
+                    <a class="side-bar-icon-parent" href="#"><i class="fa-solid fa-location-dot side-bar-icon"></i>Lorem ipsum dolor sit.</a>
+                    <a class="side-bar-icon-parent" href="#"><i class="fa-solid fa-phone side-bar-icon"></i>00970598755328</a>
+                    <a class="side-bar-icon-parent" href="#"><i class="fa-solid fa-envelope side-bar-icon"></i>Loremipsumdolor@gmail.com</a>
+                </div>
+                <form class="side-bar-form">
+                    <input class="side-bar-email" type="email" placeholder="email">
+                    <button class="side-bar-subscribe" type="submit">subscribe</button>
+                </form>
+                <div class="sidebar-bottom-icons-parent ">
+                    <a href="#"><i class="fa-brands fa-twitter sidebar-bottom-icons"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram sidebar-bottom-icons"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f sidebar-bottom-icons"></i></a>
+                    <a href="#"><i class="fa-brands fa-dribbble sidebar-bottom-icons"></i></a>
+                </div>
+                <div class="side-bar-bottom-para-parent">
+                    <p class="side-bar-bottom-para">free shipping <br> for orders over 50%</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="popup-login-parent">
+        <div class="popup-login-inner-container shadow rounded">
+            <form>
+                <h1>please login</h1>
+                <div class="input-container">
+                    <input class="username login-inputs" type="text" required>
+                    <label>username</label>
+                </div>
+                <div class="input-container">
+                    <input class="password login-inputs" type="password" required>
+                    <label>password</label>
+                </div>
+                <button type="button" class="popup-login-btn">log in</button>
+            </form>
+            <p class="text">Don't have an account? <a href="#">Register</a></p>
+            <div class="logged-in-popup-parent">
+                <div class="logged-in-para logged-in-para-bg-animation rounded">
+                    <span class="span-1"></span>
+                    <span class="span-2"></span>
+                    <span class="span-3"></span>
+                    <span class="span-4"></span>
+                    <p class="login-para">welcome admin</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- end of login popup window -->
+
+
+
+
+
+
+
+
+
+   
+    <script src="assets/js/bookstore-JavaScript.js"></script>
+    <script src="./assets/js/bookList.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.js"
+        integrity="sha512-F3F53+tMh/CBxMQ60GN5R4EiFW7PcuND+9IDC3Qpkwc7SfxgzHigRdUO3+2+mNal2ot3Wp6KR0zx8r8BbsW+Bg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+</body>
+
+</html>

@@ -1,0 +1,893 @@
+@media screen  and (min-width:320px) and (max-width:375px){
+/* global/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* end of global/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+h1:before{
+    left: 0;
+}
+
+
+.list-item-div{
+    width: 240px;
+}
+
+.list-item{
+    width: 190px; 
+}
+
+.list-item:before{
+    width: 190px;
+}
+
+
+.about-us-window-div{
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 761px; 
+    z-index: 10;
+    transition: all 1s cubic-bezier(.19,0,.61,1.72);
+    opacity :0;
+    overflow: hidden;
+    
+}
+
+.about-us-window-inner-container{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.momen-bio{
+    margin-top: 16px;
+    width: 340px;
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+.about-us-description-inner-container{
+    width: 100%;
+    height: fit-content;
+}
+
+.about-us-description-inner-container p{
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-shadow: 0px 0px 1px black;
+    padding: 0 0 0 5px;
+    margin: 5px 0 5px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 20px 0px #3ba8f1;
+}
+
+.fullstack-link{
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0px;
+}
+
+
+
+/* don't display these between 320px and 375px//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.signImageDiv{
+    display: none;
+}
+.right-arrow{
+    display: none;
+}
+.left-arrow{
+    display: none;
+}
+.about-us-description-media{
+    display: none;
+}
+
+}
+
+
+
+
+
+
+
+@media screen  and (min-width:376px) and (max-width:500px){
+    .list-item-div{
+        width: 270px;
+    }
+    
+    .list-item{
+        width: 240px; 
+    }
+    
+    .list-item:before{
+        width: 240px;
+    }
+
+    .about-us-window-div{
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 761px; 
+        z-index: 10;
+        transition: all 1s cubic-bezier(.19,0,.61,1.72);
+        opacity :0;
+        overflow: hidden;
+        
+    }
+    
+    .about-us-window-inner-container{
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .momen-bio{
+        margin-top: 16px;
+        width: 340px;
+        height: 305px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+    }
+
+    .about-us-description-inner-container{
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .about-us-description-inner-container p{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-shadow: 0px 0px 1px black;
+        padding: 0 0 0 5px;
+        margin: 5px 0 5px 0;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 20px 0px #3ba8f1;
+    }
+
+    .fullstack-link{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0px;
+    }
+
+
+/* don't display these between 376px and 500px//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.signImageDiv{
+    display: none;
+}
+
+} 
+
+
+@media screen  and (min-width:501px) and (max-width:575px){
+    .list-item-div{
+        width: 400px;
+    }
+    
+    .list-item{
+        width: 370px; 
+    }
+    
+    .list-item:before{
+        width: 370px;
+    }
+
+    .about-us-window-div{
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 761px; 
+        z-index: 10;
+        transition: all 1s cubic-bezier(.19,0,.61,1.72);
+        opacity :0;
+        overflow: hidden;
+        
+    }
+    
+    .about-us-window-inner-container{
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .momen-bio{
+        margin-top: 16px;
+        width: 340px;
+        height: 305px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+    }
+
+    .about-us-description-inner-container{
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .about-us-description-inner-container p{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-shadow: 0px 0px 1px black;
+        padding: 0 0 0 5px;
+        margin: 5px 0 5px 0;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 20px 0px #3ba8f1;
+    }
+
+    .fullstack-link{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0px;
+    }
+
+
+
+/* don't display these between 501px and 575px//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    .signImageDiv{
+        display: none;
+    }
+
+
+}
+
+
+@media screen  and (min-width:576px) and (max-width:620px){
+    .list-item-div{
+        width: 436px;
+    }
+    
+    .list-item{
+        width: 406px; 
+    }
+    
+    .list-item:before{
+        width: 406px;
+    }
+
+    .about-us-window-div{
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 761px; 
+        z-index: 10;
+        transition: all 1s cubic-bezier(.19,0,.61,1.72);
+        opacity :0;
+        overflow: hidden;
+        
+    }
+    
+    .about-us-window-inner-container{
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .momen-bio{
+        margin-top: 16px;
+        width: 340px;
+        height: 305px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+    }
+
+    .about-us-description-inner-container{
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .about-us-description-inner-container p{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-shadow: 0px 0px 1px black;
+        padding: 0 0 0 5px;
+        margin: 5px 0 5px 0;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 20px 0px #3ba8f1;
+    }
+
+    .fullstack-link{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0px;
+    }
+
+
+/* don't display these between 576px and 620px//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .signImageDiv{
+        display: none;
+    }
+
+
+}
+
+
+
+@media screen  and (min-width:621px) and (max-width:830px){
+
+    .about-us-window-div{
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 761px; 
+        z-index: 10;
+        transition: all 1s cubic-bezier(.19,0,.61,1.72);
+        opacity :0;
+        overflow: hidden;
+        
+    }
+    
+    .about-us-window-inner-container{
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .momen-bio{
+        margin-top: 16px;
+        width: 340px;
+        height: 305px;
+    }
+
+    .about-us-description-inner-container{
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .about-us-description-inner-container p{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-shadow: 0px 0px 1px black;
+        padding: 0 0 0 5px;
+        margin: 5px 0 5px 0;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 20px 0px #3ba8f1;
+    }
+
+    .fullstack-link{
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0px;
+    }
+
+
+
+
+/* don't display these between 621px and 830px//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .signImageDiv{
+        display: none;
+    }
+}
+
+
+
+
+
+@media screen  and (min-width:831px) and (max-width:1300px){
+
+    .right-arrow{
+        position: absolute;
+        top: -40px;
+        right: 0;
+        font-size: 25px;
+        width: fit-content;
+        height: fit-content;
+        color: black;
+        transition: .5s;
+    }
+
+    .right-arrow:hover{
+        color: #3ba8f1;
+        right: -5px;
+    }
+
+    .left-arrow{
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: -40px;
+        left: 0;
+        font-size: 25px;
+        color: black;
+        transition: .5s;
+    }
+
+    .left-arrow:hover{
+        color: #3ba8f1;
+        left: -5px;
+    }
+
+
+    .about-us-description-media{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .about-us-description-inner-container-media{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        transform: translateX(-100%);
+        transition: all .5s;
+    }
+
+    .about-us-description-inner-container-media p{
+        font-family: josefin;
+        font-size: 20px;
+        color: black;
+        line-height: 42px;
+        letter-spacing: 1px;
+        text-align: start;
+        text-shadow: 0px 0px 1px black;
+    }
+
+    .first-two-bios-container{
+        transition: all .5s;
+    }
+    
+    .second-two-bios-container{
+        transition: all .5s;
+    }
+
+    .signImageDiv{
+        transition: all 1s cubic-bezier(.75,-0.44,.26,1.26); 
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-1920px); 
+        
+    }
+    
+    
+    .signImageDiv-inner-container{
+        width: 90%;
+        height: 800px;
+        margin: auto;
+        position: relative;
+      
+    }
+
+    .signImage{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .ayman-bio{
+        width: 340px;
+        height: 255px;
+    }
+    
+    
+    .momen-bio{
+        width: 340px;
+        height: 255px;
+    }
+    
+    .mohammad-bio{
+        margin-top: 5px;
+        width: 340px;
+        height: 234px;
+    }
+    
+    .sahar-bio{
+        margin-top: 5px;
+        width: 340px;
+        height: 234px;
+    }
+    
+    .user-pic-div{
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+       margin-bottom: 10px;
+
+    }
+    
+    .ayman-bio:hover .user-pic-div{
+        width: 150px;
+        height: 150px;
+    }
+    .momen-bio:hover .user-pic-div{
+        width: 150px;
+        height: 150px;
+    }
+    .mohammad-bio:hover .user-pic-div{
+        width: 150px;
+        height: 150px;
+    }
+    .sahar-bio:hover .user-pic-div{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .user-pic-div img{
+        width: 200px;
+        height: 200px;
+        transform: translate(-45px,0px);
+    }
+
+    .mohammad-bio .user-pic-div img{
+        transform: translate(-200px,-186px);
+        width: 350px;
+        height: 350px;
+    }
+
+    .momen-bio .user-pic-div img{
+        transform: translate(-57px,-11px);
+        width: 145px;
+        height: 145px;
+    }
+    
+    .ayman-bio:hover .user-pic-div img{
+        width:250px;
+        height: 250px;
+        transform: translate(-20px,0);
+    }
+    .momen-bio:hover .user-pic-div img{
+        width:250px;
+        height: 250px;
+        transform: translate(-87px,-28px);
+    }
+    .mohammad-bio:hover .user-pic-div img{
+        width: 400px;
+        height: 400px;
+        transform: translate(-196px,-196px);
+    }
+    .sahar-bio:hover .user-pic-div img{
+        width:250px;
+        height: 250px;
+        transform: translate(0,0);
+    }
+    
+
+
+/* don't display this between 831px and 1300px ///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .about-us-window-div{
+        display: none;
+    }
+    .about-us-description{
+        display: none;
+    }
+}
+
+
+@media screen  and (min-width:1301px) and (max-width:1699px){
+
+    .about-us-description{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .about-us-description-inner-container{
+        width: auto;
+        height: 100%;
+        margin: 0 340px;
+    }
+    
+    .about-us-description-inner-container p{
+        font-family: josefin;
+        font-size: 20px;
+        color: black;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-align: start;
+        text-shadow: 0px 0px 1px black;
+        padding: 0 10px;
+    }
+
+    .fullstack-link{
+        line-height: 25px;
+    }
+
+
+    .signImageDiv{
+        transition: all 1s cubic-bezier(.75,-0.44,.26,1.26); 
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-1920px); 
+        
+    }
+    
+    
+    .signImageDiv-inner-container{
+        width: 90%;
+        height: 800px;
+        margin: auto;
+        position: relative;
+      
+    }
+
+    .signImage{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .ayman-bio{
+        width: 340px;
+        height: 255px;
+    }
+    
+    
+    .momen-bio{
+        width: 340px;
+        height: 255px;
+    }
+    
+    .mohammad-bio{
+        margin-top: 5px;
+        width: 340px;
+        height: 234px;
+    }
+    
+    .sahar-bio{
+        margin-top: 5px;
+        width: 340px;
+        height: 234px;
+    }
+    
+    .user-pic-div{
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+       margin-bottom: 10px;
+
+    }
+    
+    .ayman-bio:hover .user-pic-div{
+        width: 150px;
+        height: 150px;
+    }
+    .momen-bio:hover .user-pic-div{
+        width: 150px;
+        height: 150px;
+    }
+    .mohammad-bio:hover .user-pic-div{
+        width: 150px;
+        height: 150px;
+    }
+    .sahar-bio:hover .user-pic-div{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .user-pic-div img{
+        width: 200px;
+        height: 200px;
+        transform: translate(-45px,0px);
+    }
+
+    .mohammad-bio .user-pic-div img{
+        transform: translate(-162px,-143px);
+        width: 300px;
+        height: 300px;
+    }
+    .momen-bio .user-pic-div img{
+        transform: translate(-57px,-11px);
+        width: 145px;
+        height: 145px;
+    }
+    
+    .ayman-bio:hover .user-pic-div img{
+        width:250px;
+        height: 250px;
+        transform: translate(-20px,0);
+    }
+    .momen-bio:hover .user-pic-div img{
+        width: 220px;
+        height: 220px;
+        transform: translate(-62px,-20px);
+    }
+    .mohammad-bio:hover .user-pic-div img{
+        width: 350px;
+        height: 350px;
+        transform: translate(-160px,-168px);
+    }
+    .sahar-bio:hover .user-pic-div img{
+        width:250px;
+        height: 250px;
+        transform: translate(0,0);
+    }
+    
+
+
+/* don't display this between 1301px and 1699px /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .about-us-window-div{
+        display: none;
+    }
+
+    .about-us-description-media{
+        display: none;
+    }
+
+    .right-arrow{
+        display: none;
+    }
+    .left-arrow{
+        display: none;
+
+    }
+}
+
+
+
+@media screen  and (min-width:1700px)  and (max-width:1900px){
+
+    .ayman-bio{
+        width: 340px;
+        height: 316px;
+    }
+    
+    .momen-bio{
+        width: 340px;
+        height: 316px;
+    }
+    
+    .mohammad-bio{
+        margin-top: 5px;
+        width: 340px;
+        height: 316px;
+    }
+    
+    .sahar-bio{
+        margin-top: 5px;
+        width: 340px;
+        height: 316px;
+    }
+    
+    .user-pic-div{
+        width: 100px;
+        height: 100px;
+        margin-top: 48px;
+       margin-bottom: 47px;
+
+    }
+    
+    .ayman-bio:hover .user-pic-div{
+        width: 200px;
+        height: 200px;
+        margin-top:5px;
+        margin-bottom: 2px;
+    }
+    .momen-bio:hover .user-pic-div{
+        width: 200px;
+        height: 200px;
+        margin-top:5px;
+        margin-bottom: 2px;
+    }
+    .mohammad-bio:hover .user-pic-div{
+        width: 200px;
+        height: 200px;
+        margin-top:5px;
+        margin-bottom: 2px;
+    }
+    .sahar-bio:hover .user-pic-div{
+        width: 200px;
+        height: 200px;
+        margin-top:5px;
+        margin-bottom: 2px;
+    }
+    
+    .user-pic-div img{
+        width: 200px;
+        height: 200px;
+        transform: translate(-45px,0px);
+    }
+
+    .mohammad-bio .user-pic-div img{
+        transform: translate(-224px,-205px);
+        width: 400px;
+        height: 400px;
+    }
+
+    .ayman-bio:hover .user-pic-div img{
+        width:250px;
+        height: 250px;
+        transform: translate(-20px,0);
+    }
+    .momen-bio:hover .user-pic-div img{
+        width:250px;
+        height: 250px;
+        transform: translate(-42px,-10px);
+    }
+    .mohammad-bio:hover .user-pic-div img{
+        width:400px;
+        height: 400px;
+        transform: translate(-160px,-180px);
+    }
+    .sahar-bio:hover .user-pic-div img{
+        width:250px;
+        height: 250px;
+        transform: translate(0,0);
+    }
+
+
+/* don't display this between 1700px and 1900px ///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .about-us-window-div{
+        display: none;
+    } 
+    .right-arrow{
+        display: none;
+    }
+    .left-arrow{
+        display: none;
+    }
+    .about-us-description-media{
+        display: none;
+    }
+}
+
+
+
+
+
+@media screen  and (min-width:1901px){
+    .about-us-window-div{
+        display: none;
+    }    
+    .right-arrow{
+        display: none;
+    }
+    .left-arrow{
+        display: none;
+    }
+    .about-us-description-media{
+        display: none;
+    }
+
+}
