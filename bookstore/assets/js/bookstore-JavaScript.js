@@ -384,7 +384,6 @@ window.addEventListener('scroll', function(event) {
 // CAROSUSEL IMAGE SLIDER////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var path = window.location.pathname;
 var page = path.split("/").pop();
-console.log( page );
 
 let width;
 let carosuselCounter;
@@ -477,13 +476,12 @@ for(let i = 0; i < carouselBulletKeys.length; i++){             // THIS CONNECTS
 
 // popup log in window/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// let loginbtnclicked=false;
+// let loginbtnclicked="false";
 // localStorage.setItem('loginStatus', loginbtnclicked);
 
 
 
 let loginbtnclicked = localStorage.getItem('loginStatus');
-console.log(loginbtnclicked);
 
 for(let i=0;i<adminTabs.length;i++){
     if(loginbtnclicked == 'true'){
@@ -500,9 +498,7 @@ for(let i=0;i<adminTabs.length;i++){
 for(let i = 0; i < loginBtn.length; i++){
     loginBtn[i].addEventListener('click', (event) => {
         event.stopPropagation();
-        console.log(loginbtnclicked);
         if(loginbtnclicked == "true"){
-            console.log("you are about to log out");
             loginBtn[0].innerHTML='Log in';
             loginBtn[1].innerHTML='Log in';
             location.href = "index.htm";
