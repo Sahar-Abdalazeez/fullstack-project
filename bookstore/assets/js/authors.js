@@ -108,12 +108,12 @@ function displayDataInTable(){
         result+=`
         <tr>
             <td>${i}</td>
-            <td>${authors[i].Title}</td>
-            <td>${authors[i].Name}</td>
-            <td>${authors[i].AuthorInfo}</td>
-            <td><img class="table-image" src="${authors[i].image}"></td>
-            <td><button class="btn btn-outline-info"  onclick="getAuthorsData(${i})"> Update </button></td>
-            <td><button class="deleteBtn btn btn-outline-danger" onclick="deleteTableAuthor(${i})"> Delete </button></td>
+            <td class=" col-xl-1">${authors[i].Title}</td>
+            <td class=" col-xl-1">${authors[i].Name}</td>
+            <td class=" col-xl-3">${authors[i].AuthorInfo}</td>
+            <td class=" col-xl-1"><img class="table-image" src="${authors[i].image}"></td>
+            <td><button class="update-table-button btn btn-outline-info"  onclick="getAuthorsData(${i})"> Update </button></td>
+            <td><button class=" delete-table-button deleteBtn btn btn-outline-danger" onclick="deleteTableAuthor(${i})"> Delete </button></td>
         </tr>
         `
     }

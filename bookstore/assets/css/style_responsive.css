@@ -41,7 +41,19 @@
 .nav-bar-sublist-icon{
     color: black;
     font-size: 24px;
-} 
+}
+
+.login-btn{
+    padding: 7px 10px 3px;
+    position: absolute;
+    top: 53px;
+    right: 18px;
+}
+
+.login-btn-div:hover .login-btn{
+    background-color: var(--maincolor);
+    color: white;
+}
 
 .sidebar-left-arrow-icon-div{
     margin-top: auto;
@@ -78,7 +90,6 @@
     margin-left: 5px;
     margin-right: 5px;
     color: black;
-    transition: all .6s;
 }
 
 .tab-item-arrow:hover::after{
@@ -139,6 +150,7 @@
     background-color: white;
     width:0px;
     position: absolute;
+    z-index: 10;
     top: -1px;
     left: 70px;
     overflow: hidden;
@@ -184,6 +196,7 @@
     background-color: white;
     width:0px;
     position: absolute;
+    z-index: 10;
     top: -1px;
     left: 70px;
     overflow: hidden;
@@ -228,6 +241,7 @@
     background-color: white;
     width:0px;
     position: absolute;
+    z-index: 10;
     top: -1px;
     left: 75px;
     overflow: hidden;
@@ -275,8 +289,9 @@
     width: 0px;
     height: 205px;
     position: absolute;
-    top: 3px;
-    left: 60px;
+    z-index: 10;
+    top: -1px;
+    left: 42px;
     opacity: 0;
     transition: width 1s, opacity 2.5s ;
 }
@@ -291,8 +306,8 @@
     background-color: white;
     width:147px;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 4px;
+    left: 15px;
 }
 
 .blog-first-level-sublist-parent{ 
@@ -381,8 +396,9 @@
     width: 0px;
     height: 205px;
     position: absolute;
-    top: -1px;
-    left: 60px;
+    z-index: 10;
+    top: -4px;
+    left: 45px;
     opacity: 0;
     transition: width 1s, opacity 2.5s ;
 }
@@ -397,8 +413,8 @@
     background-color: white;
     width:fit-content;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 4px;
+    left: 14px;
     opacity: 1;
     transition: width .5s, opacity .6s;
 }
@@ -498,13 +514,24 @@
     overflow: hidden;
     opacity: 0;
     transition: width .5s, opacity .6s;
-    border: 1px solid black;
+}
+
+.layouts-right-arrow::after{
+    content: "\f105";
+    font: normal normal normal 9px/1 FontAwesome;
+    margin-left: 62px;
+    margin-right: 5px;
+    color: black;
+    transition: all .6s;
+}
+
+.layouts-right-arrow:hover::after{
+    color: var(--maincolor);
 }
 
 .shop-first-level-sublist-item:nth-child(3):hover .layouts-div{
     width: 113px;
     opacity: 1;
-    transition-duration: 1s;
 }
 
 /* pages tab////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -520,10 +547,94 @@
     transition: width .5s, opacity .6s;
 }
 
+.pages-div-rigth-arrow::after{
+    content: "\f105";
+    font: normal normal normal 9px/1 FontAwesome;
+    margin-left: 78px;
+    margin-right: 5px;
+    color: black;
+    transition: all .6s;
+}
+
+.pages-div-rigth-arrow:hover::after{
+    color: var(--maincolor);
+}
+
 .shop-first-level-sublist-item:nth-child(4):hover .pages-div{
     width: 89.9062px;
     opacity: 1;
 } 
+
+.tabs-list-parent .tab-item:nth-child(6){
+    background-color: black;
+    width: fit-content;
+}
+
+.tabs-list-parent .tab-item:nth-child(6):hover{
+    background-color: var(--maincolor);
+
+}
+.tabs-list-parent .tab-item:nth-child(6) .tab-item-link{
+    color: white;
+}
+
+.tabs-list-parent .tab-item:nth-child(6):hover .tab-item-link{
+    color: white;
+}
+
+.tabs-list-parent .tab-item-arrow:nth-child(6)::after{
+    color: white;
+}
+
+.tabs-list-parent .tab-item-arrow:nth-child(6):hover::after{
+    color: white;
+}
+
+.admin-first-level-sublist-div{
+    background-color: white;
+    width:0px;
+    position: absolute;
+    z-index: 10;
+    top: -1px;
+    left: 75px;
+    overflow: hidden;
+    opacity: 0;
+    transition: width .5s, opacity .6s;
+}
+
+.tabs-list-parent .tab-item:nth-child(6):hover .admin-first-level-sublist-div{
+    width: 165px;
+    opacity: 1;
+}
+
+.admin-first-level-sublist-parent{
+    padding-left: 5px;
+    list-style-type: none;
+}
+
+.admin-first-level-sublist-item{
+    width: fit-content;
+}
+
+.admin-first-level-sublist-link{
+    white-space: nowrap;
+    width: fit-content;
+    font-size: 10px;
+    text-decoration: none;
+    font-family: josfin;
+    color: black;
+    letter-spacing: 3.85px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.admin-first-level-sublist-link:hover{
+    color: var(--maincolor);
+    cursor: pointer;
+}
+
+
 
 /* SIDEBAR///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -873,9 +984,17 @@ font-size: 20px;
 
 } 
 
+/*popup login window  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.popup-login-parent{
+    /* top: 238px; */
+    top: 57px;
+}
 
 
-
+.input-container{
+    width: 100%;
+}
 
 
 
@@ -958,7 +1077,19 @@ font-size: 20px;
     .nav-bar-sublist-icon{
         color: black;
         font-size: 24px;
-    } 
+    }
+
+    .login-btn{
+        padding: 7px 10px 3px;
+        position: absolute;
+        top: 53px;
+        right: 18px;
+    }
+    
+    .login-btn-div:hover .login-btn{
+        background-color: var(--maincolor);
+        color: white;
+    }
     
     .sidebar-left-arrow-icon-div{
         margin-top: auto;
@@ -1060,6 +1191,7 @@ font-size: 20px;
         background-color: white;
         width:0px;
         position: absolute;
+        z-index: 10;
         top: 3px;
         left: 97px;
         overflow: hidden;
@@ -1105,6 +1237,7 @@ font-size: 20px;
         background-color: white;
         width:0px;
         position: absolute;
+        z-index: 10;
         top: 5px;
         left: 99px;
         overflow: hidden;
@@ -1149,6 +1282,7 @@ font-size: 20px;
         background-color: white;
         width:0px;
         position: absolute;
+        z-index: 10;
         top: 6px;
         left: 99px;
         overflow: hidden;
@@ -1196,8 +1330,9 @@ font-size: 20px;
         width: 0px;
         height: 205px;
         position: absolute;
-        top: 8px;
-        left: 78px;
+        z-index: 10;
+        top: 4px;
+        left: 69px;
         opacity: 0;
         transition: width 1s, opacity 2.5s ;
     }
@@ -1212,8 +1347,8 @@ font-size: 20px;
         background-color: white;
         width:189px;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 4px;
+        left: 15px;
     }
     
     .blog-first-level-sublist-parent{ 
@@ -1303,8 +1438,9 @@ font-size: 20px;
         width: 0px;
         height: 205px;
         position: absolute;
-        top: 5px;
-        left: 83px;
+        z-index: 10;
+        top: 1px;
+        left: 65px;
         opacity: 0;
         transition: width 1s, opacity 2.5s ;
     }
@@ -1319,8 +1455,8 @@ font-size: 20px;
         background-color: white;
         width:fit-content;
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 4px;
+        left: 15px;
         opacity: 1;
         transition: width .5s, opacity .6s;
     }
@@ -1455,10 +1591,82 @@ font-size: 20px;
         color: black;
         transition: all .6s;
     }
+
+    .pages-div-rigth-arrow:hover::after{
+        color: var(--maincolor);
+    }
     
     .shop-first-level-sublist-item:nth-child(4):hover .pages-div{
         width: 93.9062px;
         opacity: 1;
+    }
+
+    .tabs-list-parent .tab-item:nth-child(6){
+        background-color: black;
+        width: fit-content;
+    }
+    
+    .tabs-list-parent .tab-item:nth-child(6):hover{
+        background-color: var(--maincolor);
+    }
+    .tabs-list-parent .tab-item:nth-child(6) .tab-item-link{
+        color: white;
+    }
+    
+    .tabs-list-parent .tab-item:nth-child(6):hover .tab-item-link{
+        color: white;
+    }
+    
+    .tabs-list-parent .tab-item-arrow:nth-child(6)::after{
+        color: white;
+    }
+    
+    .tabs-list-parent .tab-item-arrow:nth-child(6):hover::after{
+        color: white;
+    }
+
+    .admin-first-level-sublist-div{
+        background-color: white;
+        width:0px;
+        position: absolute;
+        z-index: 10;
+        top: 7px;
+        left: 100px;
+        overflow: hidden;
+        opacity: 0;
+        transition: width .5s, opacity .6s;
+    }
+    
+    .tabs-list-parent .tab-item:nth-child(6):hover .admin-first-level-sublist-div{
+        width: 228px;
+        opacity: 1;
+    }
+    
+    .admin-first-level-sublist-parent{
+        padding-left: 5px;
+        list-style-type: none;
+    }
+    
+    .admin-first-level-sublist-item{
+        width: fit-content;
+    }
+    
+    .admin-first-level-sublist-link{
+        white-space: nowrap;
+        width: fit-content;
+        font-size: 15px;
+        text-decoration: none;
+        font-family: josfin;
+        color: black;
+        letter-spacing: 3.85px;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: all .5s;
+    }
+    
+    .admin-first-level-sublist-link:hover{
+        color: var(--maincolor);
+        cursor: pointer;
     }
     
     /* SIDEBAR///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -1794,7 +2002,7 @@ font-size: 41px;
 .imagine-read-more-btn{
     padding: 12px 12px;
     bottom: 131px;
-    left: 78px;  
+    left: 96px;  
 } 
 
 @keyframes imagine-read-more-btn-pan-left{
@@ -1807,6 +2015,13 @@ font-size: 41px;
 }
 
 } 
+
+/*popup login window  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.popup-login-parent{
+    top: 204px;
+}
+
 
 
 
@@ -1982,6 +2197,12 @@ font-size: 41px;
     }
     
 } 
+
+/*popup login window  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.popup-login-parent{
+    top: 217px;
+}
 
 
 
@@ -2171,9 +2392,6 @@ font-size: 41px;
 
 
 }
-
-
-
 
 
 @media screen  and (min-width:1901px) and (max-width:1920px){
