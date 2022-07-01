@@ -161,6 +161,9 @@ function showlist() {
 if(localStorage.getItem('arrivals')){
     arrivalsArray = JSON.parse(localStorage.getItem('arrivalsArray'));
     showlist();
+}else{
+    localStorage.setItem('arrivals', JSON.stringify(arrivalsArray));
+    showlist();
 }
 
 
