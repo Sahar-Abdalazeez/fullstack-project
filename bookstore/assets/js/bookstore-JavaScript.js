@@ -476,27 +476,33 @@ for(let i = 0; i < carouselBulletKeys.length; i++){             // THIS CONNECTS
 
 // popup log in window/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// let loginbtnclicked=false;
-// localStorage.setItem('loginStatus', loginbtnclicked);
-// console.log(loginbtnclicked);
 
+let loginbtnclicked= localStorage.getItem('loginStatus');
 
-
-let loginbtnclicked = localStorage.getItem('loginStatus');
-
-
-for(let i=0;i<adminTabs.length;i++){
-    if(loginbtnclicked == "true"){
-        loginBtn[0].innerHTML='Log out';
-        loginBtn[1].innerHTML='Log out';
-    }else if(loginbtnclicked == "false"){
+if(localStorage.getItem('loginStatus')==null){
+    loginbtnclicked= localStorage.setItem('loginStatus', "false");
+    for(let i=0;i<adminTabs.length;i++){
         loginBtn[0].innerHTML='Log in';
         loginBtn[1].innerHTML='Log in';
         adminTabs[i].style.display = 'none'; // to hide the admin tab when the page loads
         popupLoginParent.style.display = 'none';
         loggedInPopupParent.style.display = 'none'; 
     }
+}else{
+    for(let i=0;i<adminTabs.length;i++){
+        if(loginbtnclicked == "true"){
+            loginBtn[0].innerHTML='Log out';
+            loginBtn[1].innerHTML='Log out';
+        }else if(loginbtnclicked == "false"){
+            loginBtn[0].innerHTML='Log in';
+            loginBtn[1].innerHTML='Log in';
+            adminTabs[i].style.display = 'none'; // to hide the admin tab when the page loads
+            popupLoginParent.style.display = 'none';
+            loggedInPopupParent.style.display = 'none'; 
+        }
+    }
 }
+
 for(let i = 0; i < loginBtn.length; i++){
     loginBtn[i].addEventListener('click', (event) => {
         event.stopPropagation();
@@ -504,11 +510,11 @@ for(let i = 0; i < loginBtn.length; i++){
             loginBtn[0].innerHTML='Log in';
             loginBtn[1].innerHTML='Log in';
             location.href = "index.htm";
-                for(let i=0;i<adminTabs.length;i++){
-                    adminTabs[i].style.display = 'none';
-                }
-                loginbtnclicked = false;
-                localStorage.setItem('loginStatus', loginbtnclicked);
+            for(let i=0;i<adminTabs.length;i++){
+                adminTabs[i].style.display = 'none';
+            }
+            loginbtnclicked = localStorage.setItem('loginStatus', "false");;
+                
         }else{
             loginBtn[i].setAttribute('disabled', 'true');
             popupLoginParent.style.removeProperty('display');
@@ -588,8 +594,8 @@ PopupLoginBtn.addEventListener('click', () => {
         },10)
         loginBtn[0].innerHTML = 'Log out';
         loginBtn[1].innerHTML = 'Log out';
-        loginbtnclicked = true;
-        localStorage.setItem('loginStatus', loginbtnclicked);
+        loginbtnclicked =  localStorage.setItem('loginStatus', "true");
+       ;
     }else{
         alert('Wrong username or password');
     }

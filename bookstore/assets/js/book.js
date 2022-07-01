@@ -110,6 +110,9 @@ function addNewBook() {
 if(localStorage.getItem('arrivals')){
     arrivalsArray = JSON.parse(localStorage.getItem('arrivalsArray'));
     display();
+}else{
+    localStorage.setItem('arrivals',JSON.stringify(arrivalsArray));
+    display();
 }
 
 
@@ -151,7 +154,6 @@ function display(){
     }
     arrivalsContainer.innerHTML = content;
     localStorage.setItem("arrivalsArray",JSON.stringify(arrivalsArray));
-    console.log(arrivalsArray);
 }
 
 

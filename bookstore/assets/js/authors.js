@@ -1,6 +1,5 @@
 var path = window.location.pathname;
 var page = path.split("/").pop();
-console.log( page );
 
 
 let title = document.querySelector('.title_input');
@@ -65,6 +64,10 @@ inputFileSelector.onclick=()=>{
 
 if(localStorage.getItem("authors")){
     authors=JSON.parse(localStorage.getItem("authors"));
+    displayDataInTable();
+    displayData();
+}else{
+    localStorage.setItem("authors",JSON.stringify(authors));
     displayDataInTable();
     displayData();
 }
