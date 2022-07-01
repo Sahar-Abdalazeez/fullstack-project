@@ -28,7 +28,6 @@ var titleCheck = false;
 var priceCheck = false;
 
 var AuthorCheck = false;
-
 let arrivalsArray =[
     arrivalObjcet ={
         category:"fantacy",
@@ -113,8 +112,6 @@ let arrivalsArray =[
 ];
 
 
-listNumber = booksItems.length;
-productNumber.innerHTML = `&nbsp${listNumber}&nbsp`;
 
 
 //function to get data from inputs 
@@ -141,11 +138,11 @@ function showlist() {
         content += `
       <div class="row">     
       <div class="list-img-container">
-        <img class='book-photo' src="${arrivalsArray[i]?.arrivalsImg}"/>
+        <img class='book-photo' src="${arrivalsArray[i].arrivalsImg}"/>
         </div>
-        <div class="title">${arrivalsArray[i]?.Title} </div>
-       <div class="price">${arrivalsArray[i]?.Price} </div>
-       <div class="author">${arrivalsArray[i]?.Author} </div>
+        <div class="title">${arrivalsArray[i].Title} </div>
+       <div class="price">${arrivalsArray[i].Price} </div>
+       <div class="author">${arrivalsArray[i].Author} </div>
        <div class="btns-container">
        <button id="delete" onclick={deleteBook(${i})} ><i class="fa-solid fa-trash-can "></i>Delete</button>
        <button id="edit" onclick={edit(${i})} ><i class="fa-solid fa-pencil"></i>Edit</button>
@@ -159,14 +156,18 @@ function showlist() {
 
 // showlist();
 
-if(localStorage.getItem('arrivals')){
-    arrivalsArray = JSON.parse(localStorage.getItem('arrivalsArray'));
+if(localStorage.getItem('arrivalsArray')==null){
+    localStorage.setItem('arrivalsArray', JSON.stringify(arrivalsArray));
     showlist();
 }else{
-    localStorage.setItem('arrivals', JSON.stringify(arrivalsArray));
+    arrivalsArray = JSON.parse(localStorage.getItem('arrivalsArray'));
     showlist();
 }
 
+
+productNumber.innerHTML = `&nbsp${arrivalsArray.length}&nbsp`;
+
+console.log(arrivalsArray);
 
 
 //function to delete item
@@ -227,16 +228,15 @@ var itemIndex;
 
 function edit(index) {
     itemIndex = index;
-    var book = booksItems[index];
     outerUpdate.style.display = "block"
     listContainer.style.display = "none"
     ContainerTitle.style.display = "none"
-    updateTitle.value = book.title;
+    updateTitle.value = "";
     // updateDescription.value = book.description;
-    updatePriceBefore.value = book.oldPrice || 0;
-    updatePrice.value = book.price;
-    updateAuthorName.value = book.author;
-    updateDescription.value=book.desc;
+    updatePriceBefore.value = "" || 0;
+    updatePrice.value = "";
+    updateAuthorName.value ="";
+    updateDescription.value = "";
     titleCheck= true;
     priceCheck = true;
     AuthorCheck= true;
@@ -248,11 +248,13 @@ function edit(index) {
 //add the updated book to the books' list
 updateBtn.onclick = function updateItem() {
     if(recentImg==undefined){
+        console.log("no picture selected");
         arrivalsArray[itemIndex].category = bookType.value;
         arrivalsArray[itemIndex].Author = author.value;
         arrivalsArray[itemIndex].Title = title.value;
         arrivalsArray[itemIndex].Price = price.value;
         arrivalsArray[itemIndex].OldPrice = priceBeforeDiscount.value;
+        localStorage.setItem('arrivalsArray', JSON.stringify(arrivalsArray));
         Swal.fire({
             position: 'top',
             icon: 'success',
@@ -263,6 +265,7 @@ updateBtn.onclick = function updateItem() {
             window.location.reload();
         })
     }else{
+        console.log("picture selected");
         arrivalsArray[itemIndex].category = bookType.value;
         arrivalsArray[itemIndex].arrivalsImg=recentImg;
         arrivalsArray[itemIndex].Author = author.value;

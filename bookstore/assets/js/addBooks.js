@@ -188,9 +188,9 @@ Add.addEventListener('click', function () {
 
 function addBook() {
     let book = getData();
-    var arrivals = JSON.parse(localStorage.getItem('arrivals'));
+    var arrivals = JSON.parse(localStorage.getItem('arrivalsArray'));
     arrivals.push(book);
-    localStorage.setItem("arrivals", JSON.stringify(arrivals));
+    localStorage.setItem("arrivalsArray", JSON.stringify(arrivals));
     clear();
     titleCheck = false;
     priceCheck = false;

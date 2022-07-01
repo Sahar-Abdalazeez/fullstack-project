@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: Oswald;
-    src: url(../local-fonts/static/Oswald-Regular.ttf);
+    src: url(../LocalFonts/static/OswaldRegular.ttf);
 }
 @font-face {
     font-family: Josefin;
-    src: url(../local-fonts/josfin/static/JosefinSans-Regular.ttf);
+    src: url(../LocalFonts/josfin/static/JosefinSansRegular.ttf);
 }
 
 
