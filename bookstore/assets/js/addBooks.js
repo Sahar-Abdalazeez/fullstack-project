@@ -19,82 +19,82 @@ let arrivalsArray =[
     arrivalObjcet ={
         category:"fantacy",
         arrivalsImg: "assets/images/books_cause.png",
-        Author:"",
-        Title:"",
-        Price: "",
-        OldPrice:""
+        Author:"MICHAEL ALICE",
+        Title:"Books For a Cause",
+        Price: "300",
+        OldPrice:"110"
     },
     arrivalObjcet ={
         category:"cooking",
         arrivalsImg: "assets/images/cooked_meals.png",
-        Author:"",
-        Title:"",
-        Price: "",
+        Author:"Alice james",
+        Title:"Home Made Meals",
+        Price: "310",
         OldPrice:""
     },
     arrivalObjcet ={
         category:"",
         arrivalsImg: "assets/images/donate_book.png",
-        Author:"",
-        Title:"",
+        Author:"Downald william ",
+        Title:"Donate a Book",
         Price: "",
         OldPrice:""
     },
     arrivalObjcet ={
         category:"cooking",
         arrivalsImg: "assets/images/eating.png",
-        Author:"",
-        Title:"",
-        Price: "",
+        Author:"downald william",
+        Title:"Adventurous Eating",
+        Price: "500",
         OldPrice:""
     },
     arrivalObjcet ={
         category:"cooking",
         arrivalsImg: "assets/images/sea_food.png",
-        Author:"",
-        Title:"",
-        Price: "",
+        Author:"Adan Baid",
+        Title:"Seafood Gourment",
+        Price: "500",
         OldPrice:""
     },
     arrivalObjcet ={
         category:"",
         arrivalsImg: "assets/images/stadium.png",
-        Author:"",
-        Title:"",
-        Price: "",
+        Author:"John Erik",
+        Title:"The Stadium by Night",
+        Price: "320",
+        OldPrice:"700"
+    },
+    arrivalObjcet ={
+        category:"fantacy",
+        arrivalsImg: "./assets/images/stars.png",
+        Author:"Alice James",
+        Title:"When The Stars Align",
+        Price: "300",
         OldPrice:""
     },
     arrivalObjcet ={
-        category:"",
-        arrivalsImg: "assets/images/stars.png",
-        Author:"",
-        Title:"",
-        Price: "",
+        category:"fantacy",
+        arrivalsImg: "./assets/images/structures.png",
+        Author:"MICHAEL ALICE",
+        Title:"Beauty of Structures",
+        Price: "310",
         OldPrice:""
     },
     arrivalObjcet ={
-        category:"",
-        arrivalsImg: "assets/images/structures.png",
-        Author:"",
-        Title:"",
-        Price: "",
-        OldPrice:""
-    },
-    arrivalObjcet ={
-        category:"",
+        category:"fantacy",
         arrivalsImg: "assets/images/visit_north.png",
-        Author:"",
-        Title:"",
-        Price: "",
-        OldPrice:""
+        Author:"Adam Baid",
+        Title:"Vistit in the North",
+        Price: "410",
+        OldPrice:"700"
     },
     arrivalObjcet ={
-        category:"",
+        category:"fantacy",
         arrivalsImg: "assets/images/wake_me_up.png",
-        Author:"",
-        Title:"",
-        Price: "",
-        OldPrice:""
+        Author:"John Erik",
+        Title:"Wake Me up",
+        Price: "410",
+        OldPrice:"700"
     }
 ];
 
