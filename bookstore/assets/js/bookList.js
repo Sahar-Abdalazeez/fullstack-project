@@ -231,11 +231,11 @@ function edit(index) {
     outerUpdate.style.display = "block"
     listContainer.style.display = "none"
     ContainerTitle.style.display = "none"
-    updateTitle.value = "";
+    updateTitle.value = arrivalsArray[itemIndex].Title;
     // updateDescription.value = book.description;
-    updatePriceBefore.value = "" || 0;
-    updatePrice.value = "";
-    updateAuthorName.value ="";
+    updatePriceBefore.value = arrivalsArray[itemIndex].OldPrice || 0;
+    updatePrice.value = arrivalsArray[itemIndex].Price;
+    updateAuthorName.value = arrivalsArray[itemIndex].Author;
     updateDescription.value = "";
     titleCheck= true;
     priceCheck = true;
