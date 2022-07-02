@@ -1,0 +1,165 @@
+
+.main-author-container{
+    margin-top: 100px;
+}
+
+.authors-paras{
+    margin-top: 40px;
+}
+
+.authors-paras h2{
+    margin-bottom: 110px;
+}
+
+input,textarea{
+    display:block;
+    width:100%;
+    margin:10px 0;
+}
+
+
+.curd-title{
+    text-transform: capitalize;
+}
+
+.add-course{
+    width: 80%;
+    margin: auto;
+    margin-top:40px;
+    box-shadow:5px 5px 21px  #dcdcdc;
+    text-align: center;
+}
+
+
+.delete{
+    border:1px solid red;
+    color:red;
+}
+
+.theTeam{
+    margin-bottom: 100px;
+}
+
+.services-img-div{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.services-img{
+width: 100%;
+height: 100%;
+}
+
+.lightGrey{
+    color: #d3d3d3;
+}
+
+button{
+    line-height: normal !important;
+    border: 1px solid black;
+} 
+
+.btns-div{
+width: fit-content;
+height: fit-content;
+justify-content: center;
+}
+
+.add_btn{
+    height: fit-content;
+    width: fit-content;
+    font-size: 16px;
+    margin: 0 10px 10px 0;
+}
+
+.clr-btn{
+    text-transform: capitalize;
+    width: fit-content;
+    height: fit-content;
+    font-size: 16px;
+    margin: 0 10px 10px 0;
+} 
+
+.input-file-selector{
+    height: fit-content;
+    widows: fit-content;
+    text-transform: capitalize;
+}
+
+.img-file{
+    width: fit-content;
+    display: none;
+}
+
+.table-image{
+    width: 50px;
+    height: 50px;
+}
+
+@media (min-width:320px) and (max-width: 428px) {
+    .theTeam{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .teamM{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: fit-content;
+    }
+    
+    .container{
+        width: 100%;
+    }
+
+
+    .update-table-button{
+        margin: 0px;
+        font-size: 8px;
+        padding: 1px;
+        font-weight: 700;
+    }
+
+    .delete-table-button{
+        margin: 0px;
+        font-size: 8px ;
+        padding: 1px;
+        font-weight: 700 ;
+    }
+
+    th{
+        font-size: 9px !important;
+        padding: 0px 2.5px 0px 0px !important;
+        margin: 0px !important;
+        
+    }
+
+    td{
+        font-size: 9px !important;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    
+        tr td:nth-child(5){
+        display: none;
+        padding: 0;
+        border-bottom-width:0px;
+    }
+
+         tr th:nth-child(5){
+        display: none;
+        padding: 0;
+        border-bottom-width:0px;
+    }
+
+
+
+}
+@media (min-width:768px) and (max-width:1114px) {
+    .container{
+        width: 100%;
+    }
+}

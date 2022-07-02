@@ -1,0 +1,28 @@
+.c-temp {
+    font-size: 80px;
+}
+
+.wimg {
+    width: 200px;
+    height: 200px;
+}
+
+
+@media (min-width: 900px) {
+    .Weather {
+        height: 100vh;
+
+    }
+    #city-select{
+        width: 25%;
+    }
+}
+
+@media (max-width:820px) {
+    .today-temp{
+        border: 1px black solid;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+}

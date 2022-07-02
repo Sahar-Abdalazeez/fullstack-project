@@ -1,20 +1,23 @@
 // GLOBAL////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 let darkOverlay = document.querySelector('.dark-overlay');
 
 darkOverlay.addEventListener('click', () => {
-    popupLoginParent.style.transform = 'translateY(300px)';
-    popupLoginParent.style.opacity = '0';
-    darkOverlay.style.filter ='brightness(1)';
-    loginBtn[0].removeAttribute('disabled');
-    loginBtn[1].removeAttribute('disabled');
-    setTimeout(() =>{
-        popupLoginParent.style.display = 'none';
-    },700);
-    if(sidebarClicked == true){
-    sidebar.style.width = '0px';
-    darkOverlay.style.filter ='brightness(1)';
-    sidebarClicked = false;
-    }
+     if(loginbtnclicked == true && sidebarClicked == false){
+        popupLoginParent.style.transform = 'translateY(300px)';
+        popupLoginParent.style.opacity = '0';
+        darkOverlay.style.filter ='brightness(1)';
+        loginbtnclicked = false;
+        loginBtn[0].removeAttribute('disabled');
+        loginBtn[1].removeAttribute('disabled');
+        setTimeout(() =>{
+            popupLoginParent.style.display = 'none';
+        },700);
+     }else if(sidebarClicked == true){
+        sidebar.style.width = '0px';
+        darkOverlay.style.filter ='brightness(1)';
+        sidebarClicked = false;
+     }
 })
 
 // NAVBAR +  SIDEBAR GLOBAL///////////////////////////////////////////////////////
@@ -71,6 +74,7 @@ let labels = document.querySelectorAll('.input-container label');
 let loginBtn = document.querySelectorAll('.login-btn');
 let PopupLoginBtn = document.querySelector('.popup-login-btn');
 let submitBtnClicked = false;
+// let loginInpputs = document.querySelectorAll('.login-inputs');
 let username = document.querySelector('.username');
 let password = document.querySelector('.password');
 let loggedInPopupParent = document.querySelector('.logged-in-popup-parent');
@@ -96,21 +100,27 @@ function showOrHideNavbar(){
     currentPosition = window.scrollY;
     if(currentPosition > previousPosition || currentPosition <= checkPos ){
         SecondNavbar.style.transform = 'translateY(-69px)';
+        console.log('second navbar is hidden');
     }else{
         SecondNavbar.style.transform = 'translateY(0px)';
+        console.log('second navbar is showing');
     }
     previousPosition = currentPosition;
 }
 
 // THOSE FUCNTIONS ARE USED TO MAKE THE CAROUSEL MOVE TO THE LEFT AUTOMATICALLY ///
 
-function rollerTimeoutFn(){
-    rollerTimeout = setTimeout(roller1,2500);
-}
-
 function roller1(){
     automaticRolling1 = setInterval(() => {
-        if(arrowClicked == false && bulletKeyClicked == false){
+        if(rightArrowClicked == false){
+            nextPic();
+        }
+    }, 6000);
+}
+
+function roller2(){
+    automaticRolling2 = setInterval(() => {
+        if(leftArrowClicked == false){
             nextPic();
         }
     }, 6000);
@@ -377,56 +387,42 @@ window.addEventListener('scroll', function(event) {
 
 
 // CAROSUSEL IMAGE SLIDER////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var path = window.location.pathname;
-var page = path.split("/").pop();
 
-let width;
-let carosuselCounter;
-let bulletKeysCounter;
-let fristround;
-let bulletKeyIndex;
-let counter;
+let width = imagesDivs[0].clientWidth;
+let carosuselCounter = imagesDivs.length-1;
+let bulletKeysCounter =0;
+let fristround = true;
+let bulletKeyIndex = 0;
+let counter = 1;
+let rightArrowClicked = false;
+let leftArrowClicked = false;
 let automaticRolling1;
 let automaticRolling2;
-let arrowClicked;
-let bulletKeyClicked;
-let rollerTimeout;
-
-roller1();
-if(page == 'index.htm'){
-width = imagesDivs[0].clientWidth;
-carosuselCounter = imagesDivs.length-1;
-bulletKeysCounter =0;
-fristround = true;
-bulletKeyIndex = 0;
-counter = 1;
-arrowClicked = false;
-bulletKeyClicked = false;
 
 imagesContainer.style.transform= `translateX(${-width}px)`;
 carouselBulletKeys[0].style.backgroundColor = 'black';
-// CAROSUEL AUTOPILOT MODE
+roller1(); // CAROSUEL AUTOPILOT MODE
 
 
 carosuselRightArrow.addEventListener('click', () => {
-    arrowClicked = true;
+    rightArrowClicked = true;
     clearInterval(automaticRolling1);
-    clearTimeout(rollerTimeout);
-    rollerTimeoutFn();
+    clearInterval(automaticRolling2);
+    setTimeout(roller1, 2500);
     setTimeout(() =>{
-    arrowClicked=false;
+    rightArrowClicked = false;
     }, 2000);
     nextPic();
 })
 
 
 carosuselLeftArrow.addEventListener('click', () => {
-    arrowClicked = true;
+    leftArrowClicked = true;
+    clearInterval(automaticRolling2);
     clearInterval(automaticRolling1);
-    clearTimeout(rollerTimeout);
-    setTimeout(roller1, 2500);
+    setTimeout(roller2, 2500);
     setTimeout(() =>{
-        arrowClicked = false;
+        leftArrowClicked = false;
     }, 2000);
     previousPic();
 })
@@ -439,17 +435,17 @@ imagesContainer.addEventListener('transitionend', () => {   // THIS KEEPS TRACK 
 
 for(let i = 0; i < carouselBulletKeys.length; i++){             // THIS CONNECTS THE NAVIGATION BULLET KEYS WITH THE IMAGES
     carouselBulletKeys[i].addEventListener('click', () => {
-        bulletKeyClicked = true;
         counter = i;
         imagesContainer.style.transition = 'all 0.5s';
         imagesContainer.style.transform= `translateX(${-width*(counter+1)}px)`;
         counter++;
         carouselBulletKeys[counter-1].style.backgroundColor = 'black';
+        arrowClicked = true;
         clearInterval(automaticRolling1);
-        clearTimeout(rollerTimeout);
-        rollerTimeoutFn();
-        setTimeout(()=>{
-            bulletKeyClicked = false;
+        clearInterval(automaticRolling2);
+        setTimeout(roller1, 2500);
+        setTimeout(() =>{
+            arrowClicked = false;
         }, 2000);
         for(let j = 2; j < carouselBulletKeys.length && j>=0; j--){
             if(i==j){
@@ -467,52 +463,26 @@ for(let i = 0; i < carouselBulletKeys.length; i++){             // THIS CONNECTS
         }   
     })
 }
-}
-
-
 
 // popup log in window/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-loggedInPopupParent.style.display = 'none';
-let loginbtnclicked= localStorage.getItem('loginStatus');
-
-if(localStorage.getItem('loginStatus')==null){
-    loginbtnclicked= localStorage.setItem('loginStatus', "false");
-    for(let i=0;i<adminTabs.length;i++){
-        loginBtn[0].innerHTML='Log in';
-        loginBtn[1].innerHTML='Log in';
-        adminTabs[i].style.display = 'none'; // to hide the admin tab when the page loads
-        popupLoginParent.style.display = 'none';
-         
-    }
-}else{
-    for(let i=0;i<adminTabs.length;i++){
-        if(loginbtnclicked == "true"){
-            loginBtn[0].innerHTML='Log out';
-            loginBtn[1].innerHTML='Log out';
-        }else if(loginbtnclicked == "false"){
-            loginBtn[0].innerHTML='Log in';
-            loginBtn[1].innerHTML='Log in';
-            adminTabs[i].style.display = 'none'; // to hide the admin tab when the page loads
-            popupLoginParent.style.display = 'none';
-            loggedInPopupParent.style.display = 'none'; 
-        }
-    }
+let loginbtnclicked = false;
+popupLoginParent.style.display = 'none'; // this is to hide the login window when the page loads, check line code 5 to see also how display property is removed when the dark overlay is clicked
+loggedInPopupParent.style.display = 'none'; 
+for(let i=0;i<adminTabs.length;i++){
+    adminTabs[i].style.display = 'none'; // to hide the admin tab when the page loads
 }
-
 for(let i = 0; i < loginBtn.length; i++){
     loginBtn[i].addEventListener('click', (event) => {
         event.stopPropagation();
-        if(loginbtnclicked == "true"){
+        if(loginBtn[i].innerHTML=='Log out'){
             loginBtn[0].innerHTML='Log in';
             loginBtn[1].innerHTML='Log in';
-            location.href = "index.htm";
             for(let i=0;i<adminTabs.length;i++){
                 adminTabs[i].style.display = 'none';
             }
-            loginbtnclicked = localStorage.setItem('loginStatus', "false");;
-                
         }else{
+            loginbtnclicked = true;
             loginBtn[i].setAttribute('disabled', 'true');
             popupLoginParent.style.removeProperty('display');
             popupLoginParent.style.transform = 'translateY(300px)';
@@ -522,8 +492,10 @@ for(let i = 0; i < loginBtn.length; i++){
                 darkOverlay.style.filter ='brightness(0.5)';
             },100) // i had to set the time-out to make sure the login window is not displayed before the dark overlay was displayed
         }
+
     })
 }
+
 
 popupLoginParent.addEventListener('click', () => {
     loginBtn[0].removeAttribute('disabled');
@@ -591,8 +563,6 @@ PopupLoginBtn.addEventListener('click', () => {
         },10)
         loginBtn[0].innerHTML = 'Log out';
         loginBtn[1].innerHTML = 'Log out';
-        loginbtnclicked =  localStorage.setItem('loginStatus', "true");
-       ;
     }else{
         alert('Wrong username or password');
     }

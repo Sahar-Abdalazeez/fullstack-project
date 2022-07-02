@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html class="html" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore</title>
-    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <!-- Font Awesome 6-->
+    <!-- font awesom v-6 -->
+    <link rel='stylesheet' href='./assets/css/all.min.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!--Bootstrap 5-->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!--Custom css -->
+    <link rel="stylesheet" href="./assets/css/addBook.style.css">
+    <!--custom responsive style-->
+    <link rel="stylesheet" href="./assets/css/addBook.responsive.css">
     <link rel="stylesheet" href="./assets/css/bookstore-Style.css">
     <link rel="stylesheet" href="./assets/css/style_responsive.css">
-    <link rel="stylesheet" href="assets/css/authors.css">
     <!--Custom  Books css -->
     <link rel="stylesheet" href="./assets/css/books.style.css">
     <!--responsive Books custom css-->
     <link rel="stylesheet" href="./assets/css/books.responsive.css">
+    <!--sweet alert-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="dark-overlay"> 
+
+
+    <div class="dark-overlay">
         <header>
             <div class="container-fluid g-0 topBlackLayerContainer">
                 <div class="container topBlackLayer">
@@ -286,7 +298,7 @@
                         </ul>
                     </div>
                     <div class="login-btn-div">
-                        <button class="login-btn" type="button"></button>
+                        <button class="login-btn" type="button">log in</button>
                     </div> 
                     <div class="nav-bar-utilities-div">
                         <div class="nav-bar-utilities-parent">
@@ -314,220 +326,141 @@
                     </div>
                 </nav>  
             </div>
-            <div class="container-fluid g-0 carousel-slider-container">
-                <div class="carousel-slider-parent">
-                    <i class="fa-solid fa-chevron-right carosusel-right-arrow"></i>
-                    <i class="fa-solid fa-chevron-left carosusel-left-arrow"></i>
-                    <div class="carousel-bullet-keys-div">
-                        <span class="carousel-bullet-key"></span>
-                        <span class="carousel-bullet-key"></span>
-                        <span class="carousel-bullet-key"></span>
-                    </div>
-                    <div class="images-container">
-                        <div class="img-div flex-grow-0 flex-shrink-0 IMAGINE-CLONE"> 
-
-                        </div>
-                        <div class="adam-wolf-img-parent img-div flex-grow-0 flex-shrink-0">
-                            <div class="adam-wolf-inner-container">
-                                <div class="adam-wolf-img-div adam-wolf-img-div-animation"><img src="img/adam-wolf.png"></div>
-                                <div class="love-img-div love-img-div-animation"><img src="img/love.png"></div>
-                                <div class="red-circle-div red-circle-div-animation"><img src="img/red-circle1.png"></div>
-                                <div class="eiffel-tower-div love-img-div-animation"><img src="img/eiffel-tower.png"></div>
-                                <div class="adam-wolf-para-pool">
-                                    <p class="adam-wolf-para-pool-1st-para-animation">it's chapter one </p>
-                                    <p class="adam-wolf-para-pool-2nd-para-animation">We love literature</p>
-                                    <p class="adam-wolf-para-pool-3rd-para-animation">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                                </div>
-                                <button class="adam-wolf-read-more-btn adam-wolf-read-more-btn-animation" type="button">read more</button>  
-                            </div>
-                        </div>
-                        <div class="night-img-parent img-div flex-grow-0 flex-shrink-0">
-                            <div class="night-img-div">
-                                <img src="img/night-wallpaper.jpg">
-                            </div>
-                            <div class="moon-para-div">
-                                <p>it's chapter one</p>
-                            </div>
-                            <div class="night-img-second-para">
-                                <p>your world of words</p>
-                            </div>
-                            <div class="night-img-third-para">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam at nisi voluptatibus, odit laborum dolore temporibus necessitatibus quisquam!</p>
-                            </div>
-                            <button class="night-img-read-more-btn" type="button">read more</button> 
-                        </div>
-                        <div class="imagine-img-parent img-div flex-grow-0 flex-shrink-0">
-                            <div class="imagine-inner-container">
-                                <div class="imagine-img-div">
-                                    <img src="img/home-2-slide-3-image-1b.jpg">
-                                </div>
-                                <div class="red-circle-imagine-div">
-                                    <img src="img/red-circle1.png">
-                                </div>
-                                <div class="imagine-para-pool">
-                                    <p>it's chapter one </p>
-                                    <p>The all-time classics</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                                </div>
-                                <button class="imagine-read-more-btn" type="button">read more</button>
-                            </div> 
-                        </div>
-                        <div class="img-div flex-grow-0 flex-shrink-0  ADAMWOLF-CLONE"></div>
-                    </div>
-               </div>
-            </div>
         </header>
-         <!-- show Books -->
-    <div>
-        <h2>New Arrivals </h2>
-        <div class="btns-container">
-            <button type="button" id="all">All </button>
-            <button type="button" id="fantacy">Fantasy </button>
-            <button type="button" id="cooking">Cooking</button>
+        <div class="main-container">
 
-        </div>
-        <div class="arrivals" id="arrivals"> </div>
-    </div>
-
-    <!-- authors---------------------------------------------------------------------------------------------------------------->
-
-    <div class="main-author-container">
-        <!--start our services -->
-        <div class="authors-paras">
-           <!-- <p class="text-center text-uppercase">o u r  s e r v i c e s</p> -->
-           <h2 class="text-center text-capitalize">authors of the month</h2> 
-       </div>
-   
-       <div class="theTeam d-flex justify-content-center">
-          
-       </div>
-       <div class="add-course d-none">  
-        <div class="container">
-           <h1 class="curd-title">edit authors</h1>
-        <div><label for="title">Title</label></div>
-        <input   class="inputs title_input form-control " type="text" placeholder="Title"  id="title">
-        <div class="labelError"><label for="title" class="text-danger">Please start with capital letter!, this input should not include numbers or !@#$%^&*()_+{}|":?>/*-+</label></div>
-        <!-- <div class="error">please start with capital later</div> -->
-        <label for="">Name</label>
-        <input class="inputs name form-control "  type="text" placeholder="Name"  id="authorName">
-        <div class="labelErrorF"><label for="authorName" class="text-danger">Please start with capital letter!, this input should not include numbers or !@#$%^&*()_+{}|":?>/*-+</label></div>
-        <label for="">Author Info</label>
-        <textarea class="inputs authorInfo form-control " placeholder="Author Info" id="authorInfoTextA"></textarea>
-        <div class="labelErrorS">
-            <label for="authorInfo" class="text-danger">Please start with capital letter!, this input should not include numbers or !@#$%^&*()_+{}|":?>/*-+</label>
-        </div>
-        <div class="container btns-div d-flex">
-            <button class="add_btn btn btn-primary" id="click" disabled >Add author</button>
-            <button class="clr-btn btn btn-danger">clear all</button>
-            <button class="input-file-selector btn btn-outline-dark">choose image</button>
-            <input type="file" class="img-file" id="image-file">
-        </div>
-        </div>
-        </div>
-    </div>
-    <table class="border border-1 border-dark table table-dark table-striped w-100 d-none" cellspacing="0">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>title</th>
-                <th>name</th>
-                <th>info</th>
-                <th>image</th>
-                <th>update</th>
-                <th>delete</th>
-            </tr>
-        </thead>
-
-         <tbody id="data">
+            <!--add title Container -->
+            <div class="add-container">
+                <i class="fa-regular fa-square-plus"></i>
+                <h1 class="add-product">Add New Product</h1>
+                <button id="add" disabled>Add</button>
+            </div>
     
-        </tbody> 
-    </table>
-
-    <footer>
-        <div class="footer-info text-white p-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h3>publisher</h3>
-                        <ul class="publisher-item mt-4">
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Bestsellers</a></li>
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Interviews</a></li>
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Authors Story</a></li>
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Book Fairs</a></li>
-                            <li class="pb-2"><a href="#" class="text-decoration-none text-white">Help (FAQ)</a></li>
-
-                        </ul>
+            <!--Container for left and right parts -->
+            <div class="Container">
+    
+                <!--Left Container -->
+                <div class="left-container">
+                    <div class="basics">
+                        <i class="fa-solid fa-sliders"></i>
+                        <div class="basic-title">Basic</div>
                     </div>
-                    <div class="col-lg-3">
-                        <div>
-                            <h3>Contact</h3>
-                            <p class="mt-4">Stay in touch with everything ChapterOne, follow us on social media and
-                                learn about new promotions.</p>
+    
+                    <div class="info-details">
+                        
+    
+                        <div class="inputContainer">
+                            <div class="label">product title <span class="text-danger fs-5">*</span> </div>
+                            <input type="text" class="text-input form-control" id="title" />
                         </div>
-                        <div>
-                            <a href="#" class="pe-2 text-white"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#" class="pe-2 text-white"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="pe-2 text-white"><i class="fa-brands fa-facebook"></i> </a>
+    
+                        <div class="inputContainer">
+                            <div class="label">Description </div>
+                            <textarea type="text" class="description text-input" id="description"></textarea>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <h3>News & Update</h3>
-                        <p class="mt-4">We’d love it if you subscribed to our newsletter! You’ll love it too.</p>
-
-                    </div>
-                    <div class="col-lg-3">
-                        <h3>Social media</h3>
-                        <div class="mt-4 d-flex  flex-wrap justify-content-evenly ">
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
+                        
+                        <div class="inputContainer">
+                            <div class="row-inputs">
+                                <div class="label-input">
+                                    <div class="label">Price <span class="text-danger fs-5 ">*</span></div>
+                                    <input type="text" class="text-input form-control" placeholder="$" id="price" />
                                 </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white" >
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
+    
+                                <div class="label-input">
+                                    <div class="label">Price before discount  </div>
+                                    <input type="text" class="text-input form-control" placeholder="$" id="price-before" />
                                 </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
+                                <div class="label-input">
+                                    <div class="label">Author name <span class="text-danger fs-5">*</span></div>
+                                    <input type="text" class="text-input form-control" id="author-name" />
                                 </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
+    
+                            </div>
+    
+    
+                            <div class="row-inputs">
+                                <div class="label-input">
+                                    <div class="label">Available </div>
+                                    <input type="text" class="text-input" placeholder="quantity in stock" id="quantity" />
                                 </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
+    
+                                <div class="label-input">
+                                    <div class="label">Pieces/Set </div>
+                                    <input type="number" min="0" class="text-input" placeholder="0" id="pieces" />
                                 </div>
-
-                            </a>
-                            <a href="#" target="_blank" class="card  bg-dark mb-2  social-img text-white">
-                                <img src="img/1.jpg" class="card-img" alt="...">
-                                <div class="card-img-overlay  ">
-                                    <p>insta</p>
+                                <div class="label-input">
+                                    <div class="label">Currency </div>
+                                    <Select type="text" class="select-input" id="currency">
+                                        <option>USD</option>
+                                        <option>JOD</option>
+                                        <option>NIS</option>
+                                    </Select>
                                 </div>
-
-                            </a>
+    
+                            </div>
                         </div>
                     </div>
                 </div>
+    
+                <!--Right Container -->
+                <div class="right-container">
+    
+                    <div class="main-image-container">
+                        <div class="basics">
+                            <div class="basic-title">
+                                <i class="fa-solid fa-images"></i>
+                                Main Image
+                            </div>
+                        </div>
+    
+                        <div class="img-container" id="adding-img-container">
+                            <img class="img-added" id="img-added" src="" />
+                            <input type="file" id="add-file" />
+    
+                        </div>
+    
+    
+                    </div>
+    
+                    <div class="categories-container">
+    
+                        <div class="basics">
+                            <div class="basic-title">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                                Categories
+                            </div>
+                        </div>
+    
+                        <div class="SelectContainer">
+                            <div class="label">Super Category</div>
+                            <select class="select-input" id="super-category">
+                                <option>Book</option>
+                                <option>film</option>
+                                <option>magazine</option>
+    
+    
+                            </select>
+                        </div>
+    
+                        <div class="SelectContainer">
+                            <div class="label">Main Category</div>
+                            <select class="select-input" id="book-type">
+                                <option>fantacy</option>
+                                <option>scientific</option>
+                                <option>cooking</option>
+                                <option>medicine</option>
+    
+                            </select>
+                        </div>
+                    </div>
+    
+    
+                </div>
             </div>
+    
         </div>
-    </footer>
     </div>
-    <!-- second nav bar -->
+     <!-- second nav bar -->
     <div class="container-fluid g-0 second-navbar-container shadow rounded">
         <nav class="row flex-nowrap g-0 nav-bar-parent">
             <div class=" brand-img-div">
@@ -638,9 +571,9 @@
                         <a class="nav-bar-list-item-link" href="#">admin</a>
                         <div class="admin-tab-second-navbar  rounded shadow">
                             <ul class="dropdown-list">
-                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="booksList.html">books list</a></li>
-                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="authors.html">authors</a></li>
-                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="addBook.html">add book</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">books list</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">authors</a></li>
+                                <li class="dropdown-list-item"><a class="dropdown-list-item-link" href="#">add book</a></li>
                             </ul>
                         </div>
                     </li>
@@ -669,8 +602,6 @@
         </nav>
     </div>
        <!--end of second nav bar  -->
-
-       <!-- sidebar ----------------------------------------------------------------------------------------------------------------------->
     <div class="sidebar-parent shadow rounded">
         <div class="sidebar-content">
             <div class="close-btn-sidebar-div">
@@ -701,7 +632,6 @@
             </div>
         </div>
     </div>
-    <!-- end of sidebar-------------------------------------------------------------------------------------------------------------------->
     <div class="popup-login-parent">
         <div class="popup-login-inner-container shadow rounded">
             <form>
@@ -732,14 +662,26 @@
     <!-- end of login popup window -->
 
 
-   
 
 
-    <!--Bootstrap js 5-->
-    <script src="assets/js/authors.js"></script>
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/bookstore-JavaScript.js"></script>
-    <script src="./assets/js/book.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.js"
+        integrity="sha512-F3F53+tMh/CBxMQ60GN5R4EiFW7PcuND+9IDC3Qpkwc7SfxgzHigRdUO3+2+mNal2ot3Wp6KR0zx8r8BbsW+Bg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="sweetalert2.all.min.js"></script> -->
+    <script src="./assets/js/addBooks.js"></script>
+    <script src="assets/js/bookstore-JavaScript.js"></script>
 
 </body>
 

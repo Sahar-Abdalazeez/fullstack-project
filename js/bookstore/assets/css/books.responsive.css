@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1700px) {
+    .prices {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    #arrivals {
+        flex-direction: row;
+    }
+    .card {
+        width: 25%;
+        height: 40%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #arrivals {
+        flex-direction: row;
+    }
+    .card {
+        width: 40%;
+        height: 40%;
+    }
+    .card-title {
+        text-transform: capitalize;
+        height: 30px;
+        font-size: 20px;
+    }
+    .prices {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #arrivals {
+        flex-direction: column;
+    }
+    .card {
+        width: 90%;
+    }
+}
