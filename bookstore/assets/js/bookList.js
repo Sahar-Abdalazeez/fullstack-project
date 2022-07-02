@@ -30,7 +30,7 @@ var priceCheck = false;
 var AuthorCheck = false;
 let arrivalsArray =[
     arrivalObjcet ={
-        category:"fantacy",
+        category:"fantasy",
         arrivalsImg: "assets/images/books_cause.png",
         Author:"MICHAEL ALICE",
         Title:"Books For a Cause",
@@ -78,7 +78,7 @@ let arrivalsArray =[
         OldPrice:"700"
     },
     arrivalObjcet ={
-        category:"fantacy",
+        category:"fantasy",
         arrivalsImg: "./assets/images/stars.png",
         Author:"Alice James",
         Title:"When The Stars Align",
@@ -86,7 +86,7 @@ let arrivalsArray =[
         OldPrice:""
     },
     arrivalObjcet ={
-        category:"fantacy",
+        category:"fantasy",
         arrivalsImg: "./assets/images/structures.png",
         Author:"MICHAEL ALICE",
         Title:"Beauty of Structures",
@@ -94,7 +94,7 @@ let arrivalsArray =[
         OldPrice:""
     },
     arrivalObjcet ={
-        category:"fantacy",
+        category:"fantasy",
         arrivalsImg: "assets/images/visit_north.png",
         Author:"Adam Baid",
         Title:"Vistit in the North",
@@ -102,7 +102,7 @@ let arrivalsArray =[
         OldPrice:"700"
     },
     arrivalObjcet ={
-        category:"fantacy",
+        category:"fantasy",
         arrivalsImg: "assets/images/wake_me_up.png",
         Author:"John Erik",
         Title:"Wake Me up",

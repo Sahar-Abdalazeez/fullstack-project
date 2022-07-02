@@ -5,9 +5,9 @@ darkOverlay.addEventListener('click', () => {
     popupLoginParent.style.transform = 'translateY(300px)';
     popupLoginParent.style.opacity = '0';
     darkOverlay.style.filter ='brightness(1)';
-    loginBtn[0].removeAttribute('disabled');
-    loginBtn[1].removeAttribute('disabled');
     setTimeout(() =>{
+        loginBtn[0].removeAttribute('disabled');
+        loginBtn[1].removeAttribute('disabled');
         popupLoginParent.style.display = 'none';
     },700);
     if(sidebarClicked == true){
@@ -424,7 +424,7 @@ carosuselLeftArrow.addEventListener('click', () => {
     arrowClicked = true;
     clearInterval(automaticRolling1);
     clearTimeout(rollerTimeout);
-    setTimeout(roller1, 2500);
+    rollerTimeoutFn();
     setTimeout(() =>{
         arrowClicked = false;
     }, 2000);
@@ -474,6 +474,7 @@ for(let i = 0; i < carouselBulletKeys.length; i++){             // THIS CONNECTS
 // popup log in window/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 loggedInPopupParent.style.display = 'none';
+popupLoginParent.style.display = 'none';
 let loginbtnclicked= localStorage.getItem('loginStatus');
 
 if(localStorage.getItem('loginStatus')==null){
@@ -482,7 +483,7 @@ if(localStorage.getItem('loginStatus')==null){
         loginBtn[0].innerHTML='Log in';
         loginBtn[1].innerHTML='Log in';
         adminTabs[i].style.display = 'none'; // to hide the admin tab when the page loads
-        popupLoginParent.style.display = 'none';
+        
          
     }
 }else{
@@ -510,7 +511,7 @@ for(let i = 0; i < loginBtn.length; i++){
             for(let i=0;i<adminTabs.length;i++){
                 adminTabs[i].style.display = 'none';
             }
-            loginbtnclicked = localStorage.setItem('loginStatus', "false");;
+            loginbtnclicked = localStorage.setItem('loginStatus', "false");
                 
         }else{
             loginBtn[i].setAttribute('disabled', 'true');
