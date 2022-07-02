@@ -392,81 +392,81 @@ let arrowClicked;
 let bulletKeyClicked;
 let rollerTimeout;
 
-roller1();
+roller1(); // CAROSUEL AUTOPILOT MODE
 if(page == 'index.htm'){
-width = imagesDivs[0].clientWidth;
-carosuselCounter = imagesDivs.length-1;
-bulletKeysCounter =0;
-fristround = true;
-bulletKeyIndex = 0;
-counter = 1;
-arrowClicked = false;
-bulletKeyClicked = false;
+    width = imagesDivs[0].clientWidth;
+    carosuselCounter = imagesDivs.length-1;
+    bulletKeysCounter =0;
+    fristround = true;
+    bulletKeyIndex = 0;
+    counter = 1;
+    arrowClicked = false;
+    bulletKeyClicked = false;
 
-imagesContainer.style.transform= `translateX(${-width}px)`;
-carouselBulletKeys[0].style.backgroundColor = 'black';
-// CAROSUEL AUTOPILOT MODE
-
-
-carosuselRightArrow.addEventListener('click', () => {
-    arrowClicked = true;
-    clearInterval(automaticRolling1);
-    clearTimeout(rollerTimeout);
-    rollerTimeoutFn();
-    setTimeout(() =>{
-    arrowClicked=false;
-    }, 2000);
-    nextPic();
-})
+    imagesContainer.style.transform= `translateX(${-width}px)`;
+    carouselBulletKeys[0].style.backgroundColor = 'black';
 
 
-carosuselLeftArrow.addEventListener('click', () => {
-    arrowClicked = true;
-    clearInterval(automaticRolling1);
-    clearTimeout(rollerTimeout);
-    rollerTimeoutFn();
-    setTimeout(() =>{
-        arrowClicked = false;
-    }, 2000);
-    previousPic();
-})
 
-
-imagesContainer.addEventListener('transitionend', () => {   // THIS KEEPS TRACK OF THE 2 CLONE  IMAGES AND FOR ANIMATION TIMING INSIDE EACH IMAGE
-    enableOrDisableInnerAnimation();
-})
-
-
-for(let i = 0; i < carouselBulletKeys.length; i++){             // THIS CONNECTS THE NAVIGATION BULLET KEYS WITH THE IMAGES
-    carouselBulletKeys[i].addEventListener('click', () => {
-        bulletKeyClicked = true;
-        counter = i;
-        imagesContainer.style.transition = 'all 0.5s';
-        imagesContainer.style.transform= `translateX(${-width*(counter+1)}px)`;
-        counter++;
-        carouselBulletKeys[counter-1].style.backgroundColor = 'black';
+    carosuselRightArrow.addEventListener('click', () => {
+        arrowClicked = true;
         clearInterval(automaticRolling1);
         clearTimeout(rollerTimeout);
         rollerTimeoutFn();
-        setTimeout(()=>{
-            bulletKeyClicked = false;
+        setTimeout(() =>{
+        arrowClicked=false;
         }, 2000);
-        for(let j = 2; j < carouselBulletKeys.length && j>=0; j--){
-            if(i==j){
-                continue;
-            }else{
-                carouselBulletKeys[j].style.backgroundColor = 'rgb(153, 153, 153)'
-            }
-        }
-        if(counter == 2 || counter == 3){
-            carosuselRightArrow.style.color ='white';
-            carosuselLeftArrow.style.color = 'white';
-        }else if(counter == 1){
-            carosuselRightArrow.style.color ='black';
-            carosuselLeftArrow.style.color = 'black';
-        }   
+        nextPic();
     })
-}
+
+
+    carosuselLeftArrow.addEventListener('click', () => {
+        arrowClicked = true;
+        clearInterval(automaticRolling1);
+        clearTimeout(rollerTimeout);
+        rollerTimeoutFn();
+        setTimeout(() =>{
+            arrowClicked = false;
+        }, 2000);
+        previousPic();
+    })
+
+
+    imagesContainer.addEventListener('transitionend', () => {   // THIS KEEPS TRACK OF THE 2 CLONE  IMAGES AND FOR ANIMATION TIMING INSIDE EACH IMAGE
+        enableOrDisableInnerAnimation();
+    })
+
+
+    for(let i = 0; i < carouselBulletKeys.length; i++){             // THIS CONNECTS THE NAVIGATION BULLET KEYS WITH THE IMAGES
+        carouselBulletKeys[i].addEventListener('click', () => {
+            bulletKeyClicked = true;
+            counter = i;
+            imagesContainer.style.transition = 'all 0.5s';
+            imagesContainer.style.transform= `translateX(${-width*(counter+1)}px)`;
+            counter++;
+            carouselBulletKeys[counter-1].style.backgroundColor = 'black';
+            clearInterval(automaticRolling1);
+            clearTimeout(rollerTimeout);
+            rollerTimeoutFn();
+            setTimeout(()=>{
+                bulletKeyClicked = false;
+            }, 2000);
+            for(let j = 2; j < carouselBulletKeys.length && j>=0; j--){
+                if(i==j){
+                    continue;
+                }else{
+                    carouselBulletKeys[j].style.backgroundColor = 'rgb(153, 153, 153)'
+                }
+            }
+            if(counter == 2 || counter == 3){
+                carosuselRightArrow.style.color ='white';
+                carosuselLeftArrow.style.color = 'white';
+            }else if(counter == 1){
+                carosuselRightArrow.style.color ='black';
+                carosuselLeftArrow.style.color = 'black';
+            }   
+        })
+    }
 }
 
 
