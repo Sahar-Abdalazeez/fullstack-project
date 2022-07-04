@@ -472,11 +472,9 @@ if(page == 'index.htm'){
 
 
 // popup log in window/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 loggedInPopupParent.style.display = 'none';
 popupLoginParent.style.display = 'none';
 let loginbtnclicked= localStorage.getItem('loginStatus');
-
 if(localStorage.getItem('loginStatus')==null){
     loginbtnclicked= localStorage.setItem('loginStatus', "false");
     for(let i=0;i<adminTabs.length;i++){
@@ -504,17 +502,16 @@ if(localStorage.getItem('loginStatus')==null){
 for(let i = 0; i < loginBtn.length; i++){
     loginBtn[i].addEventListener('click', (event) => {
         event.stopPropagation();
+        loginBtn[i].setAttribute('disabled', 'true');
         if(loginbtnclicked == "true"){
-            loginBtn[0].innerHTML='Log in';
-            loginBtn[1].innerHTML='Log in';
+            loginBtn[i].innerHTML='Log in';
             location.href = "index.htm";
             for(let i=0;i<adminTabs.length;i++){
                 adminTabs[i].style.display = 'none';
             }
             loginbtnclicked = localStorage.setItem('loginStatus', "false");
-                
+            loginBtn[i].removeAttribute('disabled');
         }else{
-            loginBtn[i].setAttribute('disabled', 'true');
             popupLoginParent.style.removeProperty('display');
             popupLoginParent.style.transform = 'translateY(300px)';
             setTimeout(() =>{
@@ -527,13 +524,13 @@ for(let i = 0; i < loginBtn.length; i++){
 }
 
 popupLoginParent.addEventListener('click', () => {
-    loginBtn[0].removeAttribute('disabled');
-    loginBtn[1].removeAttribute('disabled');
     popupLoginParent.style.transform = 'translateY(300px)';
     popupLoginParent.style.opacity = '0';
     darkOverlay.style.filter ='brightness(1)';
     setTimeout(() =>{
         popupLoginParent.style.display = 'none';
+        loginBtn[0].removeAttribute('disabled');
+        loginBtn[1].removeAttribute('disabled');
     },700)
 });
 
@@ -600,7 +597,12 @@ PopupLoginBtn.addEventListener('click', () => {
 
 })
 
+// window.addEventListener("beforeunload", () => {
+//     alert('You are about to leave the page');
+// })
 
-
+// window.addEventListener("unload", () => {
+//     localStorage.removeItem('loginStatus');
+// });
 
 
