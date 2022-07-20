@@ -92,19 +92,6 @@ let arrivalsArray =[
     }
 ];
 
-function addNewBook() {
-    arrivalObjcet = {
-        category: bookType.value,
-        arrivalsImg: recentImg,
-        Author: author.value,
-        Title: title.value,
-        Price: price.value,
-        OldPrice: priceBeforeDiscount.value
-    }
-    arrivalsArray.push(arrivalObjcet);
-    localStorage.setItem("arrivalsArray",JSON.stringify(arrivalsArray));
-}
-
 // display();
 
 if(localStorage.getItem('arrivalsArray')){
@@ -115,9 +102,6 @@ if(localStorage.getItem('arrivalsArray')){
     display();
 }
 
-
-
-// var mybooks = JSON.parse(localStorage.getItem('new-arrivals'));
 
 //function to display the arrivals 
 function display(){
