@@ -330,7 +330,8 @@ sidebarCloseBtn.addEventListener('click', () => { //this one also applies for al
 
 
 
-sidebarRevealBtn.addEventListener('click', () => {
+sidebarRevealBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
     sidebar.style.width = '100vw';
     sidebarClicked = true;
 })
@@ -597,12 +598,6 @@ PopupLoginBtn.addEventListener('click', () => {
 
 })
 
-// window.addEventListener("beforeunload", () => {
-//     alert('You are about to leave the page');
-// })
 
-// window.addEventListener("unload", () => {
-//     localStorage.removeItem('loginStatus');
-// });
 
 
