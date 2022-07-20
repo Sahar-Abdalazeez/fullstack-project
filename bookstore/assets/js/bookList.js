@@ -167,9 +167,6 @@ if(localStorage.getItem('arrivalsArray')==null){
 
 productNumber.innerHTML = `&nbsp${arrivalsArray.length}&nbsp`;
 
-console.log(arrivalsArray);
-
-
 //function to delete item
 function deleteBook(index) {
 
@@ -248,7 +245,6 @@ function edit(index) {
 //add the updated book to the books' list
 updateBtn.onclick = function updateItem() {
     if(recentImg==undefined){
-        console.log("no picture selected");
         arrivalsArray[itemIndex].category = bookType.value;
         arrivalsArray[itemIndex].Author = author.value;
         arrivalsArray[itemIndex].Title = title.value;
@@ -265,7 +261,6 @@ updateBtn.onclick = function updateItem() {
             window.location.reload();
         })
     }else{
-        console.log("picture selected");
         arrivalsArray[itemIndex].category = bookType.value;
         arrivalsArray[itemIndex].arrivalsImg=recentImg;
         arrivalsArray[itemIndex].Author = author.value;

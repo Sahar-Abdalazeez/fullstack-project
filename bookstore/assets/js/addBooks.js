@@ -147,6 +147,7 @@ function addNewBook() {
         Price: price.value,
         OldPrice: priceBeforeDiscount.value
     }
+    arrivalsArray = JSON.parse(localStorage.getItem('arrivalsArray'));
     arrivalsArray.push(arrivalObjcet);
     localStorage.setItem("arrivalsArray",JSON.stringify(arrivalsArray));
 }
@@ -165,22 +166,6 @@ Add.addEventListener('click', function () {
         timer: 1500
     })
 })
-
-function addBook() {
-    let book = getData();
-    var arrivals = JSON.parse(localStorage.getItem('arrivalsArray'));
-    arrivals.push(book);
-    localStorage.setItem("arrivalsArray", JSON.stringify(arrivals));
-    clear();
-    titleCheck = false;
-    priceCheck = false;
-    AuthorCheck = false;
-    disabledOrNot();
-
-}
-
-
-
 
 function disabledOrNot() {
     if (titleCheck && priceCheck && AuthorCheck ) {
