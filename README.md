@@ -5,7 +5,7 @@ Four students did this project as a part of the fornt-end phase of an online ful
 3. [Mohamad Jaber](https://github.com/Mohamad-jaber)
 4. [Momen Ajarmah](https://github.com/Momen-Ajarmah)
 
-You can try our website for yourself [here](https://sahar-abdalazeez.github.io/fullstack-project/)
+You can try our website for yourself [here](https://sahar-abdalazeez.github.io/fullstack-project/) or you can watch this quick review video [here](https://www.linkedin.com/posts/ayman-maani_forntend-webdevelopment-frontenddeveloper-activity-6959553552004329472-xEBI?utm_source=linkedin_share&utm_medium=member_desktop_web) that Ayman Maani prepared. 
 
 # Project's Aim
 We were tasked to create a responsive website with multiple pages, a CRUD system, an API, and a local storage using only HTML5, JavaScript, CSS3, and Bootstrap.
