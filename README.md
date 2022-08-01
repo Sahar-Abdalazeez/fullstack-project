@@ -25,7 +25,7 @@ The bookstore website consists of :
    
 2. `The carousel slider` ***was built using only plain Javascript, HTML5, CSS3, and BootStrap.*** The first frame, for instance, has four pictures grouped together and then animated individually alongside the paragraph and the "read more" button. The slider also features the autopilot mode, which automatically movies pictures when you are not interacting with it. To navigate, you can use the handlers on each side of the slider or the bullet navigation keys at the bottom.
 3. `The books' exhibit` ***was designed using only plain JavaScript, CSS3, Bootstrap, and HTML5.*** This section is entirely editable through a CRUD system. Consequently, you can edit, add, and delete any book you want. This CRUD system is only available through the admin list that appears in the navigation bar once logged in.
-4. `The Authors' section` is similar to the books' exhibit. Its components are entirely editable through a CRUD system that is connected to it and can be accessed through the admin list in the nav bar, once logged in.
+4. `The Authors' section` is similar to the books' exhibit. Its components are entirely editable through a CRUD system that is connected to it and can be accessed through the admin list in the nav bar once logged in.
 ## 3. `The Weather page`
 The weather page consists of a basic API that requests free weather-related data from a server to the selected city from the list. 
 ## 4. `About us`
